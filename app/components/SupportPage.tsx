@@ -29,7 +29,11 @@ export default function SupportPage({ lang }: { lang: Lang }) {
             </h1>
             <div className="bg-neutral-900/50 backdrop-blur-md rounded-3xl p-8 border border-white/10 shadow-2xl">
                 <p className="text-neutral-300 mb-6 text-center leading-relaxed">
-                    {t.supportPage.body}
+                    {t.supportPage.body.split(SUPPORT_EMAIL)[0]}
+                    <a href={`mailto:${SUPPORT_EMAIL}`} className="text-white hover:text-purple-400 underline underline-offset-4 decoration-white/20 hover:decoration-purple-400/50 transition-all font-medium">
+                        {SUPPORT_EMAIL}
+                    </a>
+                    {t.supportPage.body.split(SUPPORT_EMAIL)[1]}
                 </p>
                 <div className="flex justify-center">
                     <a href={`mailto:${SUPPORT_EMAIL}`} className="inline-flex items-center gap-3 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-medium transition-all duration-200 border border-white/5 hover:border-white/20">

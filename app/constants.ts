@@ -1,1 +1,1 @@
-export const SUPPORT_EMAIL = 'support.sudokuultimato@metsander.com';
+export const SUPPORT_EMAIL = 'sudokuultimato@metsander.com';
