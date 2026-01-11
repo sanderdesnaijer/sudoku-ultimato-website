@@ -63,6 +63,14 @@ export type Translations = {
     title: string;
     body: string;
   };
+  privacyPage: {
+    title: string;
+    lastUpdated: string;
+    sections: {
+      title: string;
+      content: string | string[];
+    }[];
+  };
   metadata: {
     title: string;
     description: string;

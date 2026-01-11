@@ -202,7 +202,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
       <footer className="py-12 border-t border-white/5 text-center mt-12 bg-neutral-950">
         <nav className="flex justify-center gap-8 mb-8 flex-wrap">
           <Link href={getLocalizedPath('/support/')} className="text-neutral-500 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.support}</Link>
-          <span className="text-neutral-500 hover:text-white transition-colors text-sm uppercase tracking-widest cursor-pointer">{t.footer.privacy}</span>
+          <Link href={getLocalizedPath('/privacy/')} className="text-neutral-500 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.privacy}</Link>
           <a href={`mailto:${SUPPORT_EMAIL}`} className="text-neutral-500 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.contact}</a>
 
         </nav>

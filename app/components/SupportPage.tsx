@@ -45,8 +45,15 @@ export default function SupportPage({ lang }: { lang: Lang }) {
         </div>
       </main>
       
-      <footer className="py-8 text-center text-neutral-600 text-sm">
-        {t.footer.rights}
+      <footer className="py-12 border-t border-white/5 text-center mt-12 bg-neutral-950">
+        <nav className="flex justify-center gap-8 mb-8 flex-wrap">
+          <Link href={lang === DEFAULT_LANG ? '/support/' : `/${lang}/support/`} className="text-white transition-colors text-sm uppercase tracking-widest">{t.footer.support}</Link>
+          <Link href={lang === DEFAULT_LANG ? '/privacy/' : `/${lang}/privacy/`} className="text-neutral-500 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.privacy}</Link>
+          <a href={`mailto:${SUPPORT_EMAIL}`} className="text-neutral-500 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.contact}</a>
+        </nav>
+        <p className="text-neutral-600 text-xs">
+            {t.footer.rights}
+        </p>
       </footer>
 
     </div>
