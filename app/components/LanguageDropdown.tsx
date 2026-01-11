@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { SUPPORTED_LANGS, messages, type Lang } from '../i18n';
+import { SUPPORTED_LANGS, messages, type Lang, DEFAULT_LANG } from '../i18n';
 
 const FLAGS: Record<Lang, string> = {
   en: '🇺🇸',
@@ -24,11 +24,37 @@ export default function LanguageDropdown({ currentLang }: { currentLang: Lang })
 
   // Helper to replace language slug in URL
   const getPathForLang = (lang: Lang) => {
-    if (!pathname) return `/${lang}`;
-    const segments = pathname.split('/');
-    // segments[0] is empty, segments[1] is lang
-    segments[1] = lang;
-    return segments.join('/');
+    if (!pathname) return lang === DEFAULT_LANG ? '/' : `/${lang}/`;
+    
+    const segments = pathname.split('/').filter(Boolean);
+    
+    // Check if current page is a language page or a root page
+    const firstSegment = segments[0];
+    const isLangSegment = (SUPPORTED_LANGS as readonly string[]).includes(firstSegment);
+
+    let newPath = '';
+    if (isLangSegment) {
+      // We are on a /[lang]/... page
+      if (lang === DEFAULT_LANG) {
+        // Switch to root version (remove lang segment)
+        newPath = '/' + segments.slice(1).join('/');
+      } else {
+        // Switch to other lang segment
+        newPath = '/' + lang + '/' + segments.slice(1).join('/');
+      }
+    } else {
+      // We are on a root page (/ or /support/)
+      if (lang === DEFAULT_LANG) {
+        newPath = '/' + segments.join('/');
+      } else {
+        newPath = '/' + lang + '/' + segments.join('/');
+      }
+    }
+
+    // Ensure leading and trailing slash
+    if (!newPath.startsWith('/')) newPath = '/' + newPath;
+    if (!newPath.endsWith('/')) newPath = newPath + '/';
+    return newPath;
   };
 
   return (

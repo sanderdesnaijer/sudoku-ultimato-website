@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Sudoku Ultimato",
-  description: "Sudoku Ultimato Redirect",
+  description: "The ultimate Sudoku experience",
 };
 
 export default function RootLayout({

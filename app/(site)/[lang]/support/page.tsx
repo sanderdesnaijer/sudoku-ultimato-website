@@ -1,12 +1,14 @@
-import { SUPPORTED_LANGS, messages, type Lang } from '../../../i18n';
+import { SUPPORTED_LANGS, messages, type Lang, DEFAULT_LANG } from '../../../i18n';
 import { SUPPORT_EMAIL } from '../../../constants';
 import Link from 'next/link';
 
 import type { Metadata } from 'next';
 import LanguageDropdown from '../../../components/LanguageDropdown';
 
+import SupportPage from '../../../components/SupportPage';
+
 export function generateStaticParams() {
-  return SUPPORTED_LANGS.map((lang) => ({ lang }));
+  return SUPPORTED_LANGS.filter(l => l !== DEFAULT_LANG).map((lang) => ({ lang }));
 }
 
 type Params = Promise<{ lang: Lang }>;
@@ -18,49 +20,18 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     title: `${t.supportPage.title} - ${t.hero.title}`,
     description: t.supportPage.body,
     alternates: {
-      canonical: `https://sudokuultimato.metsander.com/${lang}/support`,
+      canonical: `https://sudokuultimato.metsander.com/${lang === DEFAULT_LANG ? '' : lang + '/'}support/`,
+      languages: {
+        'en': 'https://sudokuultimato.metsander.com/support/',
+        'nl': 'https://sudokuultimato.metsander.com/nl/support/',
+        'th': 'https://sudokuultimato.metsander.com/th/support/',
+        'x-default': 'https://sudokuultimato.metsander.com/support/',
+      },
     },
   };
 }
 
 export default async function Support({ params }: { params: Params }) {
   const { lang } = await params;
-  const t = messages[lang];
-
-  return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100 font-sans selection:bg-purple-500 selection:text-white flex flex-col">
-       <header className="py-6 px-6 border-b border-white/5 flex justify-between items-center">
-         <div className="max-w-7xl">
-            <Link href={`/${lang}`} className="text-sm font-semibold text-neutral-400 hover:text-white transition-colors flex items-center gap-2">
-                ← {t.hero.title}
-            </Link>
-         </div>
-         <LanguageDropdown currentLang={lang} />
-       </header>
-
-      <main className="flex-grow flex items-center justify-center p-6 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-900/10 to-neutral-950/0">
-        <div className="w-full max-w-lg">
-            <h1 className="text-4xl font-bold mb-8 text-center bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent">
-                {t.supportPage.title}
-            </h1>
-            <div className="bg-neutral-900/50 backdrop-blur-md rounded-3xl p-8 border border-white/10 shadow-2xl">
-                <p className="text-neutral-300 mb-6 text-center leading-relaxed">
-                    {t.supportPage.body}
-                </p>
-                <div className="flex justify-center">
-                    <a href={`mailto:${SUPPORT_EMAIL}`} className="inline-flex items-center gap-3 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-medium transition-all duration-200 border border-white/5 hover:border-white/20">
-                        📧 {SUPPORT_EMAIL}
-                    </a>
-                </div>
-
-            </div>
-        </div>
-      </main>
-      
-      <footer className="py-8 text-center text-neutral-600 text-sm">
-        {t.footer.rights}
-      </footer>
-
-    </div>
-  );
+  return <SupportPage lang={lang} />;
 }

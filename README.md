@@ -9,7 +9,7 @@ Experience the platform live at:
 ---
 
 ## 🧩 About Sudoku Ultimato
-**Sudoku Ultimato** is not just another grid game. It emphasizes deterministic procedural generation, non-blocking background computation, and a highly customizable user experience. Whether you're solving a quick 4x4 mini-grid or a complex 16x16 "Giant" Killer variant, our engine ensures a smooth and challenging experience.
+**Sudoku Ultimato** is not just another grid game. It emphasizes deterministic procedural generation, non-blocking background computation, and a highly customizable user experience. Whether you're solving a quick 4x4 mini-grid sor a complex 16x16 "Giant" Killer variant, our engine ensures a smooth and challenging experience.
 
 ### Key Game Features:
 - **Variant Support**: Classic Sudoku and Killer Sudoku (Sum Cages).
@@ -74,8 +74,7 @@ npx serve@latest out
 - [x] Multilingual support (EN, NL, TH)
 - [x] SEO Optimization
 - [x] Responsive Hero Section
-- [ ] Direct Play integration
-- [ ] Global Leaderboards preview
+- [ ] Update store links
 
 ---
 
