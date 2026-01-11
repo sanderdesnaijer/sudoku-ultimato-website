@@ -63,6 +63,11 @@ npm run build
 ```
 The output will be in the `out` directory.
 
+To preview the production build locally:
+```bash
+npx serve@latest out
+```
+
 ---
 
 ## 🗺 Roadmap
