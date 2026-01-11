@@ -49,9 +49,20 @@ export default async function Home({ params }: { params: Params }) {
             </button>
         </div>
         
-        {/* Mockup Placeholder */}
-        <div className="mt-16 relative z-10 w-full max-w-4xl mx-auto h-[300px] sm:h-[500px] rounded-t-3xl border border-white/10 bg-neutral-900/50 backdrop-blur-xl shadow-2xl flex items-center justify-center animate-in fade-in zoom-in-95 duration-1000 delay-500">
-            <span className="text-neutral-500 font-medium">App Screenshot Placeholder</span>
+        {/* Hero Images */}
+        <div className="mt-10 sm:mt-16 relative z-10 w-full max-w-5xl mx-auto flex justify-center items-end animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 px-4 sm:px-0">
+             <div className="flex w-full items-center justify-center -space-x-[1px]">
+                  <img 
+                    src={`/App Store /${lang.toUpperCase()} /Image_1.png`} 
+                    alt="Sudoku Ultimato Gameplay" 
+                    className="w-1/2 h-auto max-h-[400px] sm:max-h-[600px] object-contain object-right"
+                  />
+                  <img 
+                    src={`/App Store /${lang.toUpperCase()} /Image_2.png`} 
+                    alt="Sudoku Ultimato Features" 
+                    className="w-1/2 h-auto max-h-[400px] sm:max-h-[600px] object-contain object-left"
+                  />
+             </div>
         </div>
       </header>
 
