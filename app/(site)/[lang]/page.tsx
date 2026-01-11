@@ -1,7 +1,9 @@
 import Link from 'next/link';
-import { SUPPORTED_LANGS, messages, type Lang } from '../i18n';
+import { SUPPORTED_LANGS, messages, type Lang } from '../../i18n';
+import { SUPPORT_EMAIL } from '../../constants';
+
 import type { Metadata } from 'next';
-import LanguageDropdown from '../components/LanguageDropdown';
+import LanguageDropdown from '../../components/LanguageDropdown';
 
 export function generateStaticParams() {
   return SUPPORTED_LANGS.map((lang) => ({ lang }));
@@ -15,6 +17,9 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: t.hero.title,
     description: t.hero.subtitle,
+    alternates: {
+      canonical: `https://sudokuultimato.metsander.com/${lang}/`,
+    },
   };
 }
 
@@ -43,9 +48,18 @@ export default async function Home({ params }: { params: Params }) {
         <p className="relative z-10 text-xl sm:text-2xl text-neutral-400 max-w-2xl mx-auto mb-10 animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200 leading-relaxed">
           {t.hero.subtitle}
         </p>
-        <div className="relative z-10 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-300">
-            <button className="px-8 py-3 bg-white text-neutral-950 rounded-full font-semibold hover:bg-neutral-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 active:scale-95 duration-200">
-                {t.hero.cta}
+        <div className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-300">
+            <button className="flex items-center justify-center gap-3 px-8 py-3 bg-white text-neutral-950 rounded-full font-semibold hover:bg-neutral-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 active:scale-95 duration-200 group">
+                <svg viewBox="0 0 384 512" width="20" height="20" className="fill-current group-hover:scale-110 transition-transform">
+                    <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 21.8-88.5 21.8-11.4 0-51.1-18.1-81.9-18.1-41.9 0-80.8 23.9-102.2 61.9-43.2 76.2-11.1 190.1 30.6 250.4 20.4 29.4 44.9 62.5 76.7 62.5 31.8 0 43.1-19.1 81.3-19.1 38.2 0 49.5 19.1 81.3 19.1 31.8 0 54.4-29.4 74.8-58.8 23.5-33.6 33.1-66.3 33.3-68.1-.8-.4-64-24.5-64.2-96.2zm-46.3-162.2c16-19.6 26.6-46.7 23.6-74.1-23.3 1-51.4 15.5-68.1 34.9-14.9 17.5-27.9 44.9-24.4 71.3 26 2.1 52.9-13 68.9-32.1z"/>
+                </svg>
+                {t.hero.ctaApple}
+            </button>
+            <button className="flex items-center justify-center gap-3 px-8 py-3 bg-neutral-900 text-white border border-white/20 rounded-full font-semibold hover:bg-neutral-800 transition-colors shadow-[0_0_20px_rgba(0,0,0,0.3)] hover:scale-105 active:scale-95 duration-200 group">
+                <svg viewBox="0 0 512 512" width="20" height="20" className="fill-current group-hover:scale-110 transition-transform">
+                    <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 58.9-34.1c18-10.3 28.5-25.9 28.5-40.4s-10.5-30.1-28.5-40.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z"/>
+                </svg>
+                {t.hero.ctaGoogle}
             </button>
         </div>
         
@@ -54,12 +68,20 @@ export default async function Home({ params }: { params: Params }) {
              <div className="flex w-full items-center justify-center -space-x-[1px]">
                   <img 
                     src={`/App Store /${lang.toUpperCase()} /Image_1.png`} 
-                    alt="Sudoku Ultimato Gameplay" 
+                    alt={t.hero.image1Alt} 
+                    title={t.hero.image1Title}
+                    width={1284}
+                    height={2778}
+                    loading="eager"
                     className="w-1/2 h-auto max-h-[400px] sm:max-h-[600px] object-contain object-right"
                   />
                   <img 
                     src={`/App Store /${lang.toUpperCase()} /Image_2.png`} 
-                    alt="Sudoku Ultimato Features" 
+                    alt={t.hero.image2Alt} 
+                    title={t.hero.image2Title}
+                    width={1284}
+                    height={2778}
+                    loading="eager"
                     className="w-1/2 h-auto max-h-[400px] sm:max-h-[600px] object-contain object-left"
                   />
              </div>
@@ -122,11 +144,7 @@ export default async function Home({ params }: { params: Params }) {
          <div className="max-w-4xl mx-auto text-center relative z-10">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">{t.themes.title}</h2>
             <p className="text-lg text-neutral-400 leading-relaxed mb-10 max-w-2xl mx-auto">{t.themes.description}</p>
-             <div className="flex justify-center gap-4">
-                 <div className="w-16 h-16 rounded-full bg-neutral-100 shadow-lg border-2 border-transparent"></div>
-                 <div className="w-16 h-16 rounded-full bg-neutral-800 shadow-lg border-2 border-white/20"></div>
-                 <div className="w-16 h-16 rounded-full bg-neutral-950 shadow-lg border-2 border-purple-500"></div>
-             </div>
+             <div className="h-10"></div>
          </div>
       </section>
 
@@ -190,12 +208,14 @@ export default async function Home({ params }: { params: Params }) {
         <nav className="flex justify-center gap-8 mb-8 flex-wrap">
           <Link href={`/${lang}/support`} className="text-neutral-500 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.support}</Link>
           <span className="text-neutral-500 hover:text-white transition-colors text-sm uppercase tracking-widest cursor-pointer">{t.footer.privacy}</span>
-          <a href="mailto:support@ultimatosudoku.com" className="text-neutral-500 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.contact}</a>
+          <a href={`mailto:${SUPPORT_EMAIL}`} className="text-neutral-500 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.contact}</a>
+
         </nav>
         <p className="text-neutral-600 text-xs">
-            © 2026 Ultimato Sudoku. All rights reserved.
+            {t.footer.rights}
         </p>
       </footer>
+
     </div>
   );
 }

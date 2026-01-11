@@ -1,10 +1,20 @@
 import { Translations } from './types';
+import { SUPPORT_EMAIL } from '../constants';
+
 
 const nl: Translations = {
+  common: {
+    selectLanguage: 'Taal selecteren'
+  },
   hero: {
-    title: 'Sudoku Ultimato',
-    subtitle: 'Sudoku zonder grenzen. Speel Klassieke Sudoku, Killer Sudoku en gigantische roosters met een heldere interface en eindeloze puzzels. Ontworpen voor zowel casual spelers als experts.',
-    cta: 'Download op iOS'
+    title: 'Sudoku Ultimato - Eindeloze Sudoku Puzzels',
+    subtitle: 'Sudoku zonder grenzen. Speel Klassieke Sudoku, Killer Sudoku en gigantische roosters met een heldere interface en eindeloze puzzels.',
+    ctaApple: 'Download op iOS',
+    ctaGoogle: 'Download op Android',
+    image1Alt: 'Sudoku Ultimato Gameplay',
+    image1Title: 'Sudoku Ultimato Gameplay Screenshot',
+    image2Alt: 'Sudoku Ultimato Functies',
+    image2Title: 'Sudoku Ultimato Functies Screenshot'
   },
   intro: {
     title: 'Wat is Sudoku Ultimato',
@@ -76,11 +86,13 @@ const nl: Translations = {
   footer: {
     support: 'Ondersteuning',
     privacy: 'Privacybeleid',
-    contact: 'Contact'
+    contact: 'Contact',
+    rights: '© 2026 Sudoku Ultimato. Alle rechten voorbehouden.'
   },
   supportPage: {
     title: 'Ondersteuning',
-    body: 'Hulp nodig? Neem contact op via support@ultimatosudoku.com'
+    body: `Hulp nodig? Neem contact op via ${SUPPORT_EMAIL}`
+
   }
 };
 

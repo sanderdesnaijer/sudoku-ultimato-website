@@ -1,7 +1,9 @@
-import { SUPPORTED_LANGS, messages, type Lang } from '../../i18n';
+import { SUPPORTED_LANGS, messages, type Lang } from '../../../i18n';
+import { SUPPORT_EMAIL } from '../../../constants';
 import Link from 'next/link';
+
 import type { Metadata } from 'next';
-import LanguageDropdown from '../../components/LanguageDropdown';
+import LanguageDropdown from '../../../components/LanguageDropdown';
 
 export function generateStaticParams() {
   return SUPPORTED_LANGS.map((lang) => ({ lang }));
@@ -15,6 +17,9 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: `${t.supportPage.title} - ${t.hero.title}`,
     description: t.supportPage.body,
+    alternates: {
+      canonical: `https://sudokuultimato.metsander.com/${lang}/support`,
+    },
   };
 }
 
@@ -43,17 +48,19 @@ export default async function Support({ params }: { params: Params }) {
                     {t.supportPage.body}
                 </p>
                 <div className="flex justify-center">
-                    <a href="mailto:support@ultimatosudoku.com" className="inline-flex items-center gap-3 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-medium transition-all duration-200 border border-white/5 hover:border-white/20">
-                        📧 support@ultimatosudoku.com
+                    <a href={`mailto:${SUPPORT_EMAIL}`} className="inline-flex items-center gap-3 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-medium transition-all duration-200 border border-white/5 hover:border-white/20">
+                        📧 {SUPPORT_EMAIL}
                     </a>
                 </div>
+
             </div>
         </div>
       </main>
       
       <footer className="py-8 text-center text-neutral-600 text-sm">
-        © 2026 Ultimato Sudoku
+        {t.footer.rights}
       </footer>
+
     </div>
   );
 }

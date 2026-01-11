@@ -1,8 +1,16 @@
 export type Translations = {
+  common: {
+    selectLanguage: string;
+  };
   hero: {
     title: string;
     subtitle: string;
-    cta: string;
+    ctaApple: string;
+    ctaGoogle: string;
+    image1Alt: string;
+    image1Title: string;
+    image2Alt: string;
+    image2Title: string;
   };
   intro: {
     title: string;
@@ -50,9 +58,11 @@ export type Translations = {
     support: string;
     privacy: string;
     contact: string;
+    rights: string;
   };
   supportPage: {
     title: string;
     body: string;
   };
 };
+

@@ -1,10 +1,20 @@
 import { Translations } from './types';
+import { SUPPORT_EMAIL } from '../constants';
+
 
 const th: Translations = {
+  common: {
+    selectLanguage: 'เลือกภาษา'
+  },
   hero: {
-    title: 'Sudoku Ultimato',
-    subtitle: 'ซูโดกุแบบไร้ขีดจำกัด เล่น Classic Sudoku, Killer Sudoku และตารางขนาดยักษ์ มาพร้อมอินเทอร์เฟซที่สะอาดตาและปริศนาที่ไม่มีวันหมด ออกแบบมาสำหรับทั้งผู้เล่นทั่วไปและผู้เชี่ยวชาญ',
-    cta: 'ดาวน์โหลดบน iOS'
+    title: 'Sudoku Ultimato - เกมปริศนาซูโดกุ',
+    subtitle: 'ซูโดกุแบบไร้ขีดจำกัด เล่น Classic Sudoku, Killer Sudoku และตารางขนาดยักษ์ มาพร้อมอินเทอร์เฟซที่สะอาดตาและปริศนาที่ไม่มีวันหมด',
+    ctaApple: 'ดาวน์โหลดบน iOS',
+    ctaGoogle: 'ดาวน์โหลดบน Android',
+    image1Alt: 'การเล่นเกม Sudoku Ultimato',
+    image1Title: 'ภาพหน้าจอการเล่นเกม Sudoku Ultimato',
+    image2Alt: 'ฟีเจอร์ของ Sudoku Ultimato',
+    image2Title: 'ภาพหน้าจอแสดงฟีเจอร์ของ Sudoku Ultimato'
   },
   intro: {
     title: 'Sudoku Ultimato คืออะไร',
@@ -76,11 +86,13 @@ const th: Translations = {
   footer: {
     support: 'ฝ่ายช่วยเหลือ',
     privacy: 'นโยบายความเป็นส่วนตัว',
-    contact: 'ติดต่อ'
+    contact: 'ติดต่อ',
+    rights: '© 2026 Sudoku Ultimato สงวนลิขสิทธิ์'
   },
   supportPage: {
     title: 'ฝ่ายช่วยเหลือ',
-    body: 'ต้องการความช่วยเหลือ? ติดต่อเราที่ support@ultimatosudoku.com'
+    body: `ต้องการความช่วยเหลือ? ติดต่อเราที่ ${SUPPORT_EMAIL}`
+
   }
 };
 

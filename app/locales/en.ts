@@ -1,10 +1,20 @@
 import { Translations } from './types';
+import { SUPPORT_EMAIL } from '../constants';
+
 
 const en: Translations = {
+  common: {
+    selectLanguage: 'Select Language'
+  },
   hero: {
-    title: 'Sudoku Ultimato',
+    title: 'Sudoku Ultimato - Endless Sudoku Puzzles',
     subtitle: 'Sudoku without limits. Play Classic Sudoku, Killer Sudoku, and giant grids with a clean interface and endless puzzles. Designed for both casual players and experts.',
-    cta: 'Download on iOS'
+    ctaApple: 'Download on iOS',
+    ctaGoogle: 'Download on Android',
+    image1Alt: 'Sudoku Ultimato Gameplay',
+    image1Title: 'Sudoku Ultimato Gameplay Screenshot',
+    image2Alt: 'Sudoku Ultimato Features',
+    image2Title: 'Sudoku Ultimato Features Screenshot'
   },
   intro: {
     title: 'What is Sudoku Ultimato',
@@ -76,12 +86,15 @@ const en: Translations = {
   footer: {
     support: 'Support',
     privacy: 'Privacy Policy',
-    contact: 'Contact'
+    contact: 'Contact',
+    rights: '© 2026 Sudoku Ultimato. All rights reserved.'
   },
   supportPage: {
     title: 'Support',
-    body: 'Need help? Contact us at support@ultimatosudoku.com'
+    body: `Need help? Contact us at ${SUPPORT_EMAIL}`
+
   }
 };
+
 
 export default en;

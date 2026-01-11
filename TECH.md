@@ -1,6 +1,6 @@
-# Project: Ultimato Sudoku (Technical Deep Dive)
+# Project: Sudoku Ultimato (Technical Deep Dive)
 
-**Ultimato Sudoku** is a high-performance, variant-rich Sudoku platform built with Flutter. Unlike standard grid games, this project emphasizes deterministic procedural generation, non-blocking background computation, and a highly customizable user experience. It scales mathematically from simple 4x4 grids to complex 16x16 "Giant" puzzles and "Killer" variants.
+**Sudoku Ultimato** is a high-performance, variant-rich Sudoku platform built with Flutter. Unlike standard grid games, this project emphasizes deterministic procedural generation, non-blocking background computation, and a highly customizable user experience. It scales mathematically from simple 4x4 grids to complex 16x16 "Giant" puzzles and "Killer" variants.
 
 ## 🏗 System Architecture
 

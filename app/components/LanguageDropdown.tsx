@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { SUPPORTED_LANGS, type Lang } from '../i18n';
+import { SUPPORTED_LANGS, messages, type Lang } from '../i18n';
 
 const FLAGS: Record<Lang, string> = {
   en: '🇺🇸',
@@ -20,6 +20,7 @@ const LABELS: Record<Lang, string> = {
 export default function LanguageDropdown({ currentLang }: { currentLang: Lang }) {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const t = messages[currentLang];
 
   // Helper to replace language slug in URL
   const getPathForLang = (lang: Lang) => {
@@ -35,7 +36,7 @@ export default function LanguageDropdown({ currentLang }: { currentLang: Lang })
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/5 transition-all text-sm font-medium text-white"
-        aria-label="Select Language"
+        aria-label={t.common.selectLanguage}
       >
         <span>{FLAGS[currentLang]}</span>
         <span className="hidden sm:inline">{LABELS[currentLang]}</span>
