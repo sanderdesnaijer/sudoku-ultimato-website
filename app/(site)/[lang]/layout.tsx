@@ -19,11 +19,49 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const t = messages[lang as Lang] || messages['en'];
   
   return {
+    metadataBase: new URL('https://sudokuultimato.metsander.com'),
     title: {
       template: `%s | ${t.metadata.title}`,
       default: t.metadata.title,
     },
     description: t.metadata.description,
+    keywords: ["Sudoku", "Sudoku Ultimato", "Killer Sudoku", "Endless Puzzles", "Brain Game", "Advanced Sudoku"],
+    authors: [{ name: "Sander de Snaijer", url: "https://metsander.com" }],
+    creator: "Sander de Snaijer",
+    publisher: "Sander de Snaijer",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    openGraph: {
+      title: t.metadata.title,
+      description: t.metadata.description,
+      url: `/${lang}/`,
+      siteName: t.metadata.title,
+      locale: lang === 'nl' ? 'nl_NL' : lang === 'th' ? 'th_TH' : 'en_US',
+      type: 'website',
+      images: [
+        {
+          url: `/AppStore/${lang.toUpperCase()}/StoreImage.png`,
+          width: 1284,
+          height: 2778,
+          alt: t.hero.imageAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.metadata.title,
+      description: t.metadata.description,
+      creator: '@sanderts',
+      images: [`/AppStore/${lang.toUpperCase()}/StoreImage.png`],
+    },
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: 'default',
+      title: t.metadata.title,
+    },
     icons: {
       icon: [
         { url: '/favicon.ico' },
@@ -35,6 +73,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       ],
     },
     manifest: '/site.webmanifest',
+    alternates: {
+      canonical: `/${lang}/`,
+      languages: {
+        'en': '/en/',
+        'nl': '/nl/',
+        'th': '/th/',
+      },
+    },
   };
 }
 

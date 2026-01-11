@@ -16,16 +16,38 @@ type Params = Promise<{ lang: Lang }>;
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { lang } = await params;
   const t = messages[lang];
+  const isDefault = lang === DEFAULT_LANG;
+  const path = isDefault ? '/support/' : `/${lang}/support/`;
+
   return {
     title: t.supportPage.title,
     description: t.supportPage.body,
+    openGraph: {
+      title: `${t.supportPage.title} | ${t.metadata.title}`,
+      description: t.supportPage.body,
+      url: path,
+      type: 'website',
+      images: [
+        {
+          url: `/AppStore/${lang.toUpperCase()}/StoreImage.png`,
+          width: 1284,
+          height: 2778,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${t.supportPage.title} | ${t.metadata.title}`,
+      description: t.supportPage.body,
+      images: [`/AppStore/${lang.toUpperCase()}/StoreImage.png`],
+    },
     alternates: {
-      canonical: `https://sudokuultimato.metsander.com/${lang === DEFAULT_LANG ? '' : lang + '/'}support/`,
+      canonical: path,
       languages: {
-        'en': 'https://sudokuultimato.metsander.com/support/',
-        'nl': 'https://sudokuultimato.metsander.com/nl/support/',
-        'th': 'https://sudokuultimato.metsander.com/th/support/',
-        'x-default': 'https://sudokuultimato.metsander.com/support/',
+        'en': '/support/',
+        'nl': '/nl/support/',
+        'th': '/th/support/',
+        'x-default': '/support/',
       },
     },
   };
