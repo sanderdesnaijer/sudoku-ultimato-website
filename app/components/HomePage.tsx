@@ -69,29 +69,17 @@ export default function HomePage({ lang }: { lang: Lang }) {
             </div>
         </div>
         
-        {/* Hero Images */}
-        <div className="mt-10 sm:mt-16 relative z-10 w-full max-w-5xl mx-auto flex justify-center items-end animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 px-4 sm:px-0">
-             <div className="flex w-full items-center justify-center -space-x-[1px]">
-                  <img 
-                  
-                    src={`/AppStore/${lang.toUpperCase()}/Image_1.png`} 
-                    alt={t.hero.image1Alt} 
-                    title={t.hero.image1Title}
-                    width={1284}
-                    height={2778}
-                    loading="eager"
-                    className="w-1/2 h-auto max-h-[400px] sm:max-h-[600px] object-contain object-right"
-                  />
-                  <img 
-                    src={`/AppStore/${lang.toUpperCase()}/Image_2.png`} 
-                    alt={t.hero.image2Alt} 
-                    title={t.hero.image2Title}
-                    width={1284}
-                    height={2778}
-                    loading="eager"
-                    className="w-1/2 h-auto max-h-[400px] sm:max-h-[600px] object-contain object-left"
-                  />
-             </div>
+        {/* Hero Image */}
+        <div className="mt-10 sm:mt-16 relative z-10 w-full max-w-4xl mx-auto flex justify-center items-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 px-4 sm:px-0">
+             <img 
+               src={`/AppStore/${lang.toUpperCase()}/StoreImage.png`} 
+               alt={t.hero.imageAlt} 
+               title={t.hero.imageTitle}
+               width={1284}
+               height={2778}
+               loading="eager"
+               className="w-full h-auto max-h-[600px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+             />
         </div>
       </header>
 

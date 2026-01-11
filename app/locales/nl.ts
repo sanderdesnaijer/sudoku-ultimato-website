@@ -12,10 +12,8 @@ const nl: Translations = {
     ctaApple: 'Download op iOS',
     ctaGoogle: 'Download op Android',
     availableSoon: 'Binnenkort beschikbaar',
-    image1Alt: 'Sudoku Ultimato Gameplay',
-    image1Title: 'Sudoku Ultimato Gameplay Screenshot',
-    image2Alt: 'Sudoku Ultimato Functies',
-    image2Title: 'Sudoku Ultimato Functies Screenshot'
+    imageAlt: 'Sudoku Ultimato App Overzicht',
+    imageTitle: 'Sudoku Ultimato App Overzicht'
   },
   intro: {
     title: 'Wat is Sudoku Ultimato',

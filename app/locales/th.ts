@@ -12,10 +12,8 @@ const th: Translations = {
     ctaApple: 'ดาวน์โหลดบน iOS',
     ctaGoogle: 'ดาวน์โหลดบน Android',
     availableSoon: 'เร็วๆ นี้',
-    image1Alt: 'การเล่นเกม Sudoku Ultimato',
-    image1Title: 'ภาพหน้าจอการเล่นเกม Sudoku Ultimato',
-    image2Alt: 'ฟีเจอร์ของ Sudoku Ultimato',
-    image2Title: 'ภาพหน้าจอแสดงฟีเจอร์ของ Sudoku Ultimato'
+    imageAlt: 'ตัวอย่างแอป Sudoku Ultimato',
+    imageTitle: 'ตัวอย่างแอป Sudoku Ultimato'
   },
   intro: {
     title: 'Sudoku Ultimato คืออะไร',

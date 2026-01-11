@@ -12,10 +12,8 @@ const en: Translations = {
     ctaApple: 'Download on iOS',
     ctaGoogle: 'Download on Android',
     availableSoon: 'Available soon',
-    image1Alt: 'Sudoku Ultimato Gameplay',
-    image1Title: 'Sudoku Ultimato Gameplay Screenshot',
-    image2Alt: 'Sudoku Ultimato Features',
-    image2Title: 'Sudoku Ultimato Features Screenshot'
+    imageAlt: 'Sudoku Ultimato App Showcase',
+    imageTitle: 'Sudoku Ultimato App Showcase'
   },
   intro: {
     title: 'What is Sudoku Ultimato',

@@ -8,10 +8,8 @@ export type Translations = {
     ctaApple: string;
     ctaGoogle: string;
     availableSoon: string;
-    image1Alt: string;
-    image1Title: string;
-    image2Alt: string;
-    image2Title: string;
+    imageAlt: string;
+    imageTitle: string;
   };
   intro: {
     title: string;
