@@ -7,6 +7,7 @@ export type Translations = {
     subtitle: string;
     ctaApple: string;
     ctaGoogle: string;
+    availableSoon: string;
     image1Alt: string;
     image1Title: string;
     image2Alt: string;

@@ -11,6 +11,7 @@ const en: Translations = {
     subtitle: 'Sudoku without limits. Play Classic Sudoku, Killer Sudoku, and giant grids with a clean interface and endless puzzles. Designed for both casual players and experts.',
     ctaApple: 'Download on iOS',
     ctaGoogle: 'Download on Android',
+    availableSoon: 'Available soon',
     image1Alt: 'Sudoku Ultimato Gameplay',
     image1Title: 'Sudoku Ultimato Gameplay Screenshot',
     image2Alt: 'Sudoku Ultimato Features',

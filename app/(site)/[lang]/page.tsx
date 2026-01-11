@@ -49,18 +49,39 @@ export default async function Home({ params }: { params: Params }) {
           {t.hero.subtitle}
         </p>
         <div className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-300">
-            <button className="flex items-center justify-center gap-3 px-8 py-3 bg-white text-neutral-950 rounded-full font-semibold hover:bg-neutral-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 active:scale-95 duration-200 group">
-                <svg viewBox="0 0 384 512" width="20" height="20" className="fill-current group-hover:scale-110 transition-transform">
-                    <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 21.8-88.5 21.8-11.4 0-51.1-18.1-81.9-18.1-41.9 0-80.8 23.9-102.2 61.9-43.2 76.2-11.1 190.1 30.6 250.4 20.4 29.4 44.9 62.5 76.7 62.5 31.8 0 43.1-19.1 81.3-19.1 38.2 0 49.5 19.1 81.3 19.1 31.8 0 54.4-29.4 74.8-58.8 23.5-33.6 33.1-66.3 33.3-68.1-.8-.4-64-24.5-64.2-96.2zm-46.3-162.2c16-19.6 26.6-46.7 23.6-74.1-23.3 1-51.4 15.5-68.1 34.9-14.9 17.5-27.9 44.9-24.4 71.3 26 2.1 52.9-13 68.9-32.1z"/>
-                </svg>
-                {t.hero.ctaApple}
-            </button>
-            <button className="flex items-center justify-center gap-3 px-8 py-3 bg-neutral-900 text-white border border-white/20 rounded-full font-semibold hover:bg-neutral-800 transition-colors shadow-[0_0_20px_rgba(0,0,0,0.3)] hover:scale-105 active:scale-95 duration-200 group">
-                <svg viewBox="0 0 512 512" width="20" height="20" className="fill-current group-hover:scale-110 transition-transform">
-                    <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 58.9-34.1c18-10.3 28.5-25.9 28.5-40.4s-10.5-30.1-28.5-40.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z"/>
-                </svg>
-                {t.hero.ctaGoogle}
-            </button>
+            {/* Apple Store Button (Disabled) */}
+            <div className="relative group">
+                <button 
+                  disabled
+                  className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-3 bg-white/10 text-white/40 border border-white/10 rounded-full font-semibold cursor-not-allowed transition-all"
+                >
+                    <svg viewBox="0 0 384 512" width="20" height="20" className="fill-current">
+                        <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 21.8-88.5 21.8-11.4 0-51.1-18.1-81.9-18.1-41.9 0-80.8 23.9-102.2 61.9-43.2 76.2-11.1 190.1 30.6 250.4 20.4 29.4 44.9 62.5 76.7 62.5 31.8 0 43.1-19.1 81.3-19.1 38.2 0 49.5 19.1 81.3 19.1 31.8 0 54.4-29.4 74.8-58.8 23.5-33.6 33.1-66.3 33.3-68.1-.8-.4-64-24.5-64.2-96.2zm-46.3-162.2c16-19.6 26.6-46.7 23.6-74.1-23.3 1-51.4 15.5-68.1 34.9-14.9 17.5-27.9 44.9-24.4 71.3 26 2.1 52.9-13 68.9-32.1z"/>
+                    </svg>
+                    {t.hero.ctaApple}
+                </button>
+                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-neutral-800 text-neutral-200 text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap border border-white/10 shadow-xl translate-y-2 group-hover:translate-y-0">
+                    {t.hero.availableSoon}
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-neutral-800" />
+                </div>
+            </div>
+
+            {/* Google Play Store Button (Disabled) */}
+            <div className="relative group">
+                <button 
+                  disabled
+                  className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-3 bg-white/5 text-white/40 border border-white/10 rounded-full font-semibold cursor-not-allowed transition-all"
+                >
+                    <svg viewBox="0 0 512 512" width="20" height="20" className="fill-current">
+                        <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 58.9-34.1c18-10.3 28.5-25.9 28.5-40.4s-10.5-30.1-28.5-40.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z"/>
+                    </svg>
+                    {t.hero.ctaGoogle}
+                </button>
+                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-neutral-800 text-neutral-200 text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap border border-white/10 shadow-xl translate-y-2 group-hover:translate-y-0">
+                    {t.hero.availableSoon}
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-neutral-800" />
+                </div>
+            </div>
         </div>
         
         {/* Hero Images */}

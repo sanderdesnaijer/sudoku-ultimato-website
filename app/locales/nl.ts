@@ -11,6 +11,7 @@ const nl: Translations = {
     subtitle: 'Sudoku zonder grenzen. Speel Klassieke Sudoku, Killer Sudoku en gigantische roosters met een heldere interface en eindeloze puzzels.',
     ctaApple: 'Download op iOS',
     ctaGoogle: 'Download op Android',
+    availableSoon: 'Binnenkort beschikbaar',
     image1Alt: 'Sudoku Ultimato Gameplay',
     image1Title: 'Sudoku Ultimato Gameplay Screenshot',
     image2Alt: 'Sudoku Ultimato Functies',

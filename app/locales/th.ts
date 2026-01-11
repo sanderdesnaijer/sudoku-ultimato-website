@@ -11,6 +11,7 @@ const th: Translations = {
     subtitle: 'ซูโดกุแบบไร้ขีดจำกัด เล่น Classic Sudoku, Killer Sudoku และตารางขนาดยักษ์ มาพร้อมอินเทอร์เฟซที่สะอาดตาและปริศนาที่ไม่มีวันหมด',
     ctaApple: 'ดาวน์โหลดบน iOS',
     ctaGoogle: 'ดาวน์โหลดบน Android',
+    availableSoon: 'เร็วๆ นี้',
     image1Alt: 'การเล่นเกม Sudoku Ultimato',
     image1Title: 'ภาพหน้าจอการเล่นเกม Sudoku Ultimato',
     image2Alt: 'ฟีเจอร์ของ Sudoku Ultimato',
