@@ -65,5 +65,9 @@ export type Translations = {
     title: string;
     body: string;
   };
+  metadata: {
+    title: string;
+    description: string;
+  };
 };
 

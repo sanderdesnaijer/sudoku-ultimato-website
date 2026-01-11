@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../../globals.css";
-import { Lang } from "../../i18n";
+import { Lang, messages } from "../../i18n";
 import GoogleAnalytics from "@/app/components/GoogleAnalytics";
 
 const geistSans = Geist({
@@ -14,10 +14,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Sudoku Ultimato",
-  description: "Endless Sudoku Puzzles",
-};
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const t = messages[lang as Lang] || messages['en'];
+  
+  return {
+    title: {
+      template: `%s | ${t.metadata.title}`,
+      default: t.metadata.title,
+    },
+    description: t.metadata.description,
+  };
+}
 
 export default async function RootLayout({
   children,

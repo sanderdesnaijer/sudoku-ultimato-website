@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const { lang } = await params;
   const t = messages[lang];
   return {
-    title: `${t.supportPage.title} - ${t.hero.title}`,
+    title: t.supportPage.title,
     description: t.supportPage.body,
     alternates: {
       canonical: `https://sudokuultimato.metsander.com/${lang === DEFAULT_LANG ? '' : lang + '/'}support/`,

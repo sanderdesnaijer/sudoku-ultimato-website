@@ -93,7 +93,10 @@ const en: Translations = {
   supportPage: {
     title: 'Support',
     body: `Need help? Contact us at ${SUPPORT_EMAIL}`
-
+  },
+  metadata: {
+    title: 'Sudoku Ultimato',
+    description: 'Endless Sudoku Puzzles'
   }
 };
 

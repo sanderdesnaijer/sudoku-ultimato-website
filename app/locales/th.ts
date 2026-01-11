@@ -93,7 +93,10 @@ const th: Translations = {
   supportPage: {
     title: 'ฝ่ายช่วยเหลือ',
     body: `ต้องการความช่วยเหลือ? ติดต่อเราที่ ${SUPPORT_EMAIL}`
-
+  },
+  metadata: {
+    title: 'Sudoku Ultimato',
+    description: 'ปริศนาซูโดกุไม่มีที่สิ้นสุด'
   }
 };
 

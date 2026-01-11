@@ -93,7 +93,10 @@ const nl: Translations = {
   supportPage: {
     title: 'Ondersteuning',
     body: `Hulp nodig? Neem contact op via ${SUPPORT_EMAIL}`
-
+  },
+  metadata: {
+    title: 'Sudoku Ultimato',
+    description: 'Eindeloze Sudoku Puzzels'
   }
 };
 
