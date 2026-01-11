@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sudoku Ultimato
 
-## Getting Started
+Welcome to the official marketing website for **Sudoku Ultimato**, a high-performance, variant-rich Sudoku platform designed for enthusiasts and competitive players alike.
 
-First, run the development server:
+## 🚀 Live Demo
+Experience the platform live at:  
+👉 [**https://sudokuultimato.metsander.com/**](https://sudokuultimato.metsander.com/)
 
+---
+
+## 🧩 About Sudoku Ultimato
+**Sudoku Ultimato** is not just another grid game. It emphasizes deterministic procedural generation, non-blocking background computation, and a highly customizable user experience. Whether you're solving a quick 4x4 mini-grid or a complex 16x16 "Giant" Killer variant, our engine ensures a smooth and challenging experience.
+
+### Key Game Features:
+- **Variant Support**: Classic Sudoku and Killer Sudoku (Sum Cages).
+- **Multiple Grid Sizes**: 4x4 (Mini), 9x9 (Classic), and 16x16 (Giant).
+- **Procedural Generation**: Every level is generated on-the-fly using a unique seed system.
+- **Multilingual**: Supports English, Dutch, and Thai.
+- **Responsive HUD**: Optimized for both portrait and landscape play.
+
+---
+
+## 💻 Tech Stack
+This marketing website is built using modern web technologies to ensure speed, SEO optimization, and a premium user experience:
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **UI Components**: Modern, responsive, and accessible components.
+- **i18n**: Multi-language support with localized routing and SEO.
+
+---
+
+## 🛠 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm / yarn / pnpm
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/sudoku-ultimato-website.git
+   cd sudoku-ultimato-website
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Deployment
+The project is configured for a static export. To build the project:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
+The output will be in the `out` directory.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🗺 Roadmap
+- [x] Multilingual support (EN, NL, TH)
+- [x] SEO Optimization
+- [x] Responsive Hero Section
+- [ ] Direct Play integration
+- [ ] Global Leaderboards preview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📄 License
+This project is private and all rights are reserved.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Built with ❤️ by [Sander de Snaijer](https://metsander.com)
