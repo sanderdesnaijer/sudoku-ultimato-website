@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../../globals.css";
 import { Lang, messages } from "../../i18n";
 import GoogleAnalytics from "@/app/components/GoogleAnalytics";
+import PreconnectLinks from "@/app/components/PreconnectLinks";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,6 +82,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         'th': '/th/',
       },
     },
+    other: {
+      'dns-prefetch': 'https://fonts.googleapis.com https://fonts.gstatic.com https://www.googletagmanager.com',
+    },
   };
 }
 
@@ -98,6 +102,7 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <PreconnectLinks />
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GA_ID} />
         )}

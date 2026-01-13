@@ -1,0 +1,36 @@
+# Cache headers for static assets
+# This file is used by Netlify. For other platforms, configure accordingly.
+
+# Static assets - cache for 1 year
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Fonts - cache for 1 year
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images - cache for 1 year
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/*.avif
+  Cache-Control: public, max-age=31536000, immutable
+
+# JavaScript and CSS - cache for 1 year
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML files - no cache (always revalidate)
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# App Store images - cache for 1 year
+/AppStore/*
+  Cache-Control: public, max-age=31536000, immutable

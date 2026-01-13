@@ -1,0 +1,29 @@
+# Apache cache headers for performance optimization
+# This file provides cache headers for static assets
+
+<IfModule mod_headers.c>
+  # Static assets - cache for 1 year
+  <FilesMatch "\.(js|css|woff2|woff|ttf|eot|svg|png|jpg|jpeg|gif|webp|avif|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  
+  # App Store images - cache for 1 year
+  <FilesMatch "^/AppStore/.*\.(png|jpg|jpeg|webp|avif)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  
+  # HTML files - no cache (always revalidate)
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+  
+  # Next.js static files - cache for 1 year
+  <FilesMatch "^/_next/static/.*">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# Enable compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
