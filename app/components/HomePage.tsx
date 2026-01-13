@@ -29,10 +29,32 @@ export default function HomePage({ lang }: { lang: Lang }) {
       <main>
         {/* Hero */}
         <header className="relative flex flex-col items-center justify-center py-24 px-6 sm:py-32 text-center overflow-hidden">
-          {/* Background Gradient */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-purple-900/20 blur-3xl opacity-50 rounded-full mix-blend-screen" />
-            <div className="absolute bottom-0 right-0 w-[800px] h-[600px] bg-blue-900/10 blur-3xl opacity-30 rounded-full" />
+          {/* Background Gradient - Fixed dimensions to prevent layout shift */}
+          <div
+            className="absolute inset-0 overflow-hidden pointer-events-none"
+            aria-hidden="true"
+            style={{ contain: "layout style paint" }}
+          >
+            <div
+              className="absolute top-0 left-1/2 -translate-x-1/2 bg-purple-900/20 blur-3xl opacity-50 rounded-full mix-blend-screen"
+              style={{
+                width: "1000px",
+                height: "500px",
+                transform: "translateX(-50%) translateZ(0)",
+                willChange: "transform",
+                contain: "layout style paint",
+              }}
+            />
+            <div
+              className="absolute bottom-0 right-0 bg-blue-900/10 blur-3xl opacity-30 rounded-full"
+              style={{
+                width: "800px",
+                height: "600px",
+                transform: "translateZ(0)",
+                willChange: "transform",
+                contain: "layout style paint",
+              }}
+            />
           </div>
 
           <h1 className="relative z-10 text-5xl sm:text-7xl font-bold tracking-tight bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
