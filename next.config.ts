@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['next'],
   },
+  // Compiler optimizations - remove console.log in production and enable minification
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
   // Note: For static exports, cache headers must be configured at the server/CDN level.
   // Recommended cache headers:
   // - Static assets (JS, CSS, fonts, images): Cache-Control: public, max-age=31536000, immutable

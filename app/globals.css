@@ -24,3 +24,43 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Hero gradient background - CSS-only to prevent CLS */
+.hero-gradient-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+}
+
+.hero-gradient-bg::before,
+.hero-gradient-bg::after {
+  content: '';
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(64px);
+  transform: translateZ(0);
+  will-change: auto;
+  contain: strict;
+}
+
+.hero-gradient-bg::before {
+  top: 0;
+  left: 50%;
+  width: min(1000px, 100vw);
+  height: 500px;
+  background: rgba(88, 28, 135, 0.2);
+  opacity: 0.5;
+  transform: translateX(-50%) translateZ(0);
+  mix-blend-mode: screen;
+}
+
+.hero-gradient-bg::after {
+  bottom: 0;
+  right: 0;
+  width: min(800px, 80vw);
+  height: 600px;
+  background: rgba(30, 58, 138, 0.1);
+  opacity: 0.3;
+}

@@ -29,33 +29,8 @@ export default function HomePage({ lang }: { lang: Lang }) {
       <main>
         {/* Hero */}
         <header className="relative flex flex-col items-center justify-center py-24 px-6 sm:py-32 text-center overflow-hidden">
-          {/* Background Gradient - Fixed dimensions to prevent layout shift */}
-          <div
-            className="absolute inset-0 overflow-hidden pointer-events-none"
-            aria-hidden="true"
-            style={{ contain: "layout style paint" }}
-          >
-            <div
-              className="absolute top-0 left-1/2 -translate-x-1/2 bg-purple-900/20 blur-3xl opacity-50 rounded-full mix-blend-screen"
-              style={{
-                width: "1000px",
-                height: "500px",
-                transform: "translateX(-50%) translateZ(0)",
-                willChange: "transform",
-                contain: "layout style paint",
-              }}
-            />
-            <div
-              className="absolute bottom-0 right-0 bg-blue-900/10 blur-3xl opacity-30 rounded-full"
-              style={{
-                width: "800px",
-                height: "600px",
-                transform: "translateZ(0)",
-                willChange: "transform",
-                contain: "layout style paint",
-              }}
-            />
-          </div>
+          {/* Background Gradient - CSS-only approach to prevent CLS */}
+          <div className="hero-gradient-bg" aria-hidden="true" />
 
           <h1 className="relative z-10 text-5xl sm:text-7xl font-bold tracking-tight bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
             {t.hero.title}
@@ -109,25 +84,30 @@ export default function HomePage({ lang }: { lang: Lang }) {
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="mt-10 sm:mt-16 relative z-10 w-full max-w-4xl mx-auto flex justify-center items-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 px-4 sm:px-0">
+          {/* Hero Image - Fixed dimensions to prevent CLS */}
+          <div
+            className="mt-10 sm:mt-16 relative z-10 w-full max-w-4xl mx-auto flex justify-center items-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 px-4 sm:px-0"
+            style={{ minHeight: "300px" }}
+          >
             <picture>
               <source
-                srcSet={`${getImagePath("640")} 640w, ${getImagePath(
+                srcSet={`${getImagePath("640")} 554w, ${getImagePath(
                   "1024"
-                )} 1024w, ${getImagePath("1284")} 1284w`}
+                )} 886w, ${getImagePath("1284")} 1108w`}
                 type="image/webp"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 600px"
+                sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1024px) min(80vw, 554px), 554px"
               />
               <img
-                src={getImagePath("1284")}
+                src={getImagePath("640")}
                 alt={t.hero.imageAlt}
                 title={t.hero.imageTitle}
-                width={1284}
-                height={2778}
+                width={554}
+                height={600}
                 loading="eager"
                 fetchPriority="high"
+                decoding="async"
                 className="w-full h-auto max-h-[600px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                style={{ aspectRatio: "554/600", contentVisibility: "auto" }}
               />
             </picture>
           </div>
