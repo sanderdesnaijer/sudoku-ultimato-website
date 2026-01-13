@@ -6,6 +6,14 @@ import LanguageDropdown from "./LanguageDropdown";
 export default function HomePage({ lang }: { lang: Lang }) {
   const t = messages[lang];
 
+  // Helper to get image path - handles NL folder with double .webp extension
+  const getImagePath = (size: "640" | "1024" | "1284") => {
+    const langUpper = lang.toUpperCase();
+    // NL folder has double .webp extension, others have single
+    const extension = langUpper === "NL" ? ".webp.webp" : ".webp";
+    return `/AppStore/${langUpper}/store-image-${size}${extension}`;
+  };
+
   const getLocalizedPath = (path: string) => {
     if (lang === DEFAULT_LANG) return path.startsWith("/") ? path : `/${path}`;
     return `/${lang}${path.startsWith("/") ? path : `/${path}`}`;
@@ -81,17 +89,25 @@ export default function HomePage({ lang }: { lang: Lang }) {
 
           {/* Hero Image */}
           <div className="mt-10 sm:mt-16 relative z-10 w-full max-w-4xl mx-auto flex justify-center items-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 px-4 sm:px-0">
-            <img
-              src={`/AppStore/${lang.toUpperCase()}/StoreImage.webp`}
-              alt={t.hero.imageAlt}
-              title={t.hero.imageTitle}
-              width={1284}
-              height={2778}
-              loading="eager"
-              fetchPriority="high"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 600px"
-              className="w-full h-auto max-h-[600px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
-            />
+            <picture>
+              <source
+                srcSet={`${getImagePath("640")} 640w, ${getImagePath(
+                  "1024"
+                )} 1024w, ${getImagePath("1284")} 1284w`}
+                type="image/webp"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 600px"
+              />
+              <img
+                src={getImagePath("1284")}
+                alt={t.hero.imageAlt}
+                title={t.hero.imageTitle}
+                width={1284}
+                height={2778}
+                loading="eager"
+                fetchPriority="high"
+                className="w-full h-auto max-h-[600px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+              />
+            </picture>
           </div>
         </header>
 
