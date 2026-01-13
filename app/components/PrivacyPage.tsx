@@ -50,7 +50,7 @@ export default function PrivacyPage({ lang }: { lang: Lang }) {
             <h1 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent">
                 {t.privacyPage.title}
             </h1>
-            <p className="text-neutral-500 mb-12 font-medium italic">
+            <p className="text-neutral-400 mb-12 font-medium italic">
                 {t.privacyPage.lastUpdated}
             </p>
 
@@ -82,11 +82,11 @@ export default function PrivacyPage({ lang }: { lang: Lang }) {
             
             <footer className="mt-20 py-12 border-t border-white/5 text-center">
                 <nav className="flex justify-center gap-8 mb-8 flex-wrap">
-                    <Link href={lang === DEFAULT_LANG ? '/support/' : `/${lang}/support/`} className="text-neutral-500 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.support}</Link>
+                    <Link href={lang === DEFAULT_LANG ? '/support/' : `/${lang}/support/`} className="text-neutral-400 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.support}</Link>
                     <Link href={lang === DEFAULT_LANG ? '/privacy/' : `/${lang}/privacy/`} className="text-white transition-colors text-sm uppercase tracking-widest">{t.footer.privacy}</Link>
-                    <a href={`mailto:${SUPPORT_EMAIL}`} className="text-neutral-500 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.contact}</a>
+                    <a href={`mailto:${SUPPORT_EMAIL}`} className="text-neutral-400 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.contact}</a>
                 </nav>
-                <p className="text-neutral-600 text-xs">
+                <p className="text-neutral-400 text-xs">
                     {t.footer.rights}
                 </p>
             </footer>

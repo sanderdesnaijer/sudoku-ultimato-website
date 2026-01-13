@@ -19,6 +19,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
          <LanguageDropdown currentLang={lang} />
       </nav>
 
+      <main>
       {/* Hero */}
       <header className="relative flex flex-col items-center justify-center py-24 px-6 sm:py-32 text-center overflow-hidden">
         {/* Background Gradient */}
@@ -157,7 +158,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
                         </div>
                     ))}
                 </div>
-                <p className="text-neutral-500 mt-10 text-sm font-medium">{t.accessibility.note}</p>
+                <p className="text-neutral-400 mt-10 text-sm font-medium">{t.accessibility.note}</p>
              </div>
         </div>
       </section>
@@ -197,16 +198,17 @@ export default function HomePage({ lang }: { lang: Lang }) {
             ))}
         </div>
       </section>
+      </main>
 
       {/* Footer */}
       <footer className="py-12 border-t border-white/5 text-center mt-12 bg-neutral-950">
         <nav className="flex justify-center gap-8 mb-8 flex-wrap">
-          <Link href={getLocalizedPath('/support/')} className="text-neutral-500 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.support}</Link>
-          <Link href={getLocalizedPath('/privacy/')} className="text-neutral-500 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.privacy}</Link>
-          <a href={`mailto:${SUPPORT_EMAIL}`} className="text-neutral-500 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.contact}</a>
+          <Link href={getLocalizedPath('/support/')} className="text-neutral-400 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.support}</Link>
+          <Link href={getLocalizedPath('/privacy/')} className="text-neutral-400 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.privacy}</Link>
+          <a href={`mailto:${SUPPORT_EMAIL}`} className="text-neutral-400 hover:text-white transition-colors text-sm uppercase tracking-widest">{t.footer.contact}</a>
 
         </nav>
-        <p className="text-neutral-600 text-xs">
+        <p className="text-neutral-400 text-xs">
             {t.footer.rights}
         </p>
       </footer>
