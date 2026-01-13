@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { messages, type Lang, DEFAULT_LANG } from "../i18n";
 import { SUPPORT_EMAIL } from "../constants";
-import LanguageDropdown from "./LanguageDropdown";
+import LanguageDropdownWrapper from "./LanguageDropdownWrapper";
 
 export default function HomePage({ lang }: { lang: Lang }) {
   const t = messages[lang];
@@ -23,7 +23,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
     <div className="min-h-screen bg-neutral-950 text-neutral-100 font-sans selection:bg-purple-500 selection:text-white">
       {/* Navigation */}
       <nav className="absolute top-6 right-6 z-50">
-        <LanguageDropdown currentLang={lang} />
+        <LanguageDropdownWrapper currentLang={lang} />
       </nav>
 
       <main>

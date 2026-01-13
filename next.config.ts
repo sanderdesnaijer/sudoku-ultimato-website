@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // Optimize bundle size and code splitting
+  experimental: {
+    optimizePackageImports: ['next'],
+  },
   // Note: For static exports, cache headers must be configured at the server/CDN level.
   // Recommended cache headers:
   // - Static assets (JS, CSS, fonts, images): Cache-Control: public, max-age=31536000, immutable

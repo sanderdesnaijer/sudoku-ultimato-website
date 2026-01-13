@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { messages, type Lang, DEFAULT_LANG } from '../i18n';
 import { SUPPORT_EMAIL } from '../constants';
-import LanguageDropdown from './LanguageDropdown';
+import LanguageDropdownWrapper from './LanguageDropdownWrapper';
 
 export default function SupportPage({ lang }: { lang: Lang }) {
   const t = messages[lang];
@@ -19,7 +19,7 @@ export default function SupportPage({ lang }: { lang: Lang }) {
                 ← {t.hero.title}
             </Link>
          </div>
-         <LanguageDropdown currentLang={lang} />
+         <LanguageDropdownWrapper currentLang={lang} />
        </header>
 
       <main className="flex-grow flex items-center justify-center p-6 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-900/10 to-neutral-950/0">
