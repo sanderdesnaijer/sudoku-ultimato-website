@@ -7,7 +7,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
   const t = messages[lang];
 
   // Helper to get image path - handles NL folder with double .webp extension
-  const getImagePath = (size: "640" | "1024" | "1284") => {
+  const getImagePath = (size: "400" | "640" | "1024" | "1284") => {
     const langUpper = lang.toUpperCase();
     // NL folder has double .webp extension, others have single
     const extension = langUpper === "NL" ? ".webp.webp" : ".webp";
@@ -90,12 +90,20 @@ export default function HomePage({ lang }: { lang: Lang }) {
             style={{ minHeight: "300px" }}
           >
             <picture>
+              {/* Mobile-first: serve smaller images on mobile devices */}
               <source
-                srcSet={`${getImagePath("640")} 554w, ${getImagePath(
-                  "1024"
-                )} 886w, ${getImagePath("1284")} 1108w`}
+                media="(max-width: 480px)"
+                srcSet={`${getImagePath("400")} 1x, ${getImagePath("640")} 2x`}
                 type="image/webp"
-                sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1024px) min(80vw, 554px), 554px"
+              />
+              <source
+                media="(max-width: 768px)"
+                srcSet={`${getImagePath("640")} 1x, ${getImagePath("1024")} 2x`}
+                type="image/webp"
+              />
+              <source
+                srcSet={`${getImagePath("1024")} 1x, ${getImagePath("1284")} 2x`}
+                type="image/webp"
               />
               <img
                 src={getImagePath("640")}

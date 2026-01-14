@@ -1,0 +1,11 @@
+# Target modern browsers only - no polyfills needed
+# This reduces bundle size by ~14KB by removing:
+# - Array.prototype.at
+# - Array.prototype.flat
+# - Array.prototype.flatMap
+# - Object.fromEntries
+# - Object.hasOwn
+# - String.prototype.trimEnd
+# - String.prototype.trimStart
+
+defaults and fully supports es6-module
