@@ -6,12 +6,9 @@ import LanguageDropdownWrapper from "./LanguageDropdownWrapper";
 export default function HomePage({ lang }: { lang: Lang }) {
   const t = messages[lang];
 
-  // Helper to get image path - handles NL folder with double .webp extension
-  const getImagePath = (size: "400" | "640" | "1024" | "1284") => {
-    const langUpper = lang.toUpperCase();
-    // NL folder has double .webp extension, others have single
-    const extension = langUpper === "NL" ? ".webp.webp" : ".webp";
-    return `/AppStore/${langUpper}/store-image-${size}${extension}`;
+  // Helper to get image path
+  const getImagePath = (size: "400" | "560" | "640" | "1024" | "1284") => {
+    return `/AppStore/${lang.toUpperCase()}/store-image-${size}.webp`;
   };
 
   const getLocalizedPath = (path: string) => {
@@ -90,32 +87,29 @@ export default function HomePage({ lang }: { lang: Lang }) {
             style={{ minHeight: "300px" }}
           >
             <picture>
-              {/* Mobile-first: serve smaller images on mobile devices */}
+              {/* Responsive images optimized for displayed size ~560px */}
+              {/* Mobile (small screens): 400px for 1x, 560px for 2x */}
               <source
-                media="(max-width: 480px)"
-                srcSet={`${getImagePath("400")} 1x, ${getImagePath("640")} 2x`}
+                media="(max-width: 400px)"
+                srcSet={`${getImagePath("400")} 1x, ${getImagePath("560")} 2x`}
                 type="image/webp"
               />
+              {/* All other screens: 560px for 1x, 1024px for 2x */}
               <source
-                media="(max-width: 768px)"
-                srcSet={`${getImagePath("640")} 1x, ${getImagePath("1024")} 2x`}
-                type="image/webp"
-              />
-              <source
-                srcSet={`${getImagePath("1024")} 1x, ${getImagePath("1284")} 2x`}
+                srcSet={`${getImagePath("560")} 1x, ${getImagePath("1024")} 2x`}
                 type="image/webp"
               />
               <img
-                src={getImagePath("640")}
+                src={getImagePath("560")}
                 alt={t.hero.imageAlt}
                 title={t.hero.imageTitle}
-                width={554}
-                height={600}
+                width={560}
+                height={606}
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
                 className="w-full h-auto max-h-[600px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
-                style={{ aspectRatio: "554/600", contentVisibility: "auto" }}
+                style={{ aspectRatio: "560/606", contentVisibility: "auto" }}
               />
             </picture>
           </div>
