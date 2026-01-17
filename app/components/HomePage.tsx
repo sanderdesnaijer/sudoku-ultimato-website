@@ -175,48 +175,69 @@ export default function HomePage({ lang }: { lang: Lang }) {
           >
             {/* Left phone - Killer Sudoku */}
             <div className="flex-[1.1] transform rotate-[-8deg] translate-y-12 sm:translate-y-16 opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300">
-              <img
-                src={`/Website/${lang.toUpperCase()}/Killer.png`}
-                alt={t.hero.killerImageAlt}
-                title={t.hero.killerImageTitle}
-                width={393}
-                height={852}
-                loading="eager"
-                decoding="async"
-                className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
-                style={{ aspectRatio: "393/852" }}
-              />
+              <picture>
+                <source
+                  srcSet={`/AppStore/${lang.toUpperCase()}/Killer-400w.webp 400w, /AppStore/${lang.toUpperCase()}/Killer-640w.webp 640w, /AppStore/${lang.toUpperCase()}/Killer.webp 863w`}
+                  type="image/webp"
+                  sizes="(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 200px"
+                />
+                <img
+                  src={`/AppStore/${lang.toUpperCase()}/Killer.webp`}
+                  alt={t.hero.killerImageAlt}
+                  title={t.hero.killerImageTitle}
+                  width={393}
+                  height={852}
+                  loading="eager"
+                  decoding="async"
+                  className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
+                  style={{ aspectRatio: "393/852" }}
+                />
+              </picture>
             </div>
 
             {/* Center phone - Classic Sudoku (main focus) */}
             <div className="flex-[1.2] z-10 transform hover:scale-105 transition-all duration-300">
-              <img
-                src={`/Website/${lang.toUpperCase()}/Classic.png`}
-                alt={t.hero.classicImageAlt}
-                title={t.hero.classicImageTitle}
-                width={393}
-                height={852}
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-                className="w-full h-auto drop-shadow-[0_40px_80px_rgba(0,0,0,0.7)]"
-                style={{ aspectRatio: "393/852" }}
-              />
+              <picture>
+                <source
+                  srcSet={`/AppStore/${lang.toUpperCase()}/Classic-400w.webp 400w, /AppStore/${lang.toUpperCase()}/Classic-640w.webp 640w, /AppStore/${lang.toUpperCase()}/Classic.webp 863w`}
+                  type="image/webp"
+                  sizes="(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 250px"
+                />
+                <img
+                  src={`/AppStore/${lang.toUpperCase()}/Classic.webp`}
+                  alt={t.hero.classicImageAlt}
+                  title={t.hero.classicImageTitle}
+                  width={393}
+                  height={852}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="w-full h-auto drop-shadow-[0_40px_80px_rgba(0,0,0,0.7)]"
+                  style={{ aspectRatio: "393/852" }}
+                />
+              </picture>
             </div>
 
             {/* Right phone - 16x16 Sudoku */}
             <div className="flex-[1.1] transform rotate-[8deg] translate-y-12 sm:translate-y-16 opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300">
-              <img
-                src={`/Website/${lang.toUpperCase()}/16x16.png`}
-                alt={t.hero.largeImageAlt}
-                title={t.hero.largeImageTitle}
-                width={393}
-                height={852}
-                loading="eager"
-                decoding="async"
-                className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
-                style={{ aspectRatio: "393/852" }}
-              />
+              <picture>
+                <source
+                  srcSet={`/AppStore/${lang.toUpperCase()}/16x16-400w.webp 400w, /AppStore/${lang.toUpperCase()}/16x16-640w.webp 640w, /AppStore/${lang.toUpperCase()}/16x16.webp 863w`}
+                  type="image/webp"
+                  sizes="(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 200px"
+                />
+                <img
+                  src={`/AppStore/${lang.toUpperCase()}/16x16.webp`}
+                  alt={t.hero.largeImageAlt}
+                  title={t.hero.largeImageTitle}
+                  width={393}
+                  height={852}
+                  loading="eager"
+                  decoding="async"
+                  className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
+                  style={{ aspectRatio: "393/852" }}
+                />
+              </picture>
             </div>
           </div>
         </header>

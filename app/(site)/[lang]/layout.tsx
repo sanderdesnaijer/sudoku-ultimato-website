@@ -71,10 +71,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       type: 'website',
       images: [
         {
-          url: `/AppStore/${lang.toUpperCase()}/StoreImage.png`,
-          width: 1284,
-          height: 2778,
+          url: `/AppStore/${lang.toUpperCase()}/og-image.jpg`,
+          width: 1200,
+          height: 630,
           alt: t.hero.imageAlt,
+          type: 'image/jpeg',
         },
       ],
     },
@@ -83,7 +84,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       title: t.metadata.title,
       description: t.metadata.description,
       creator: '@sanderts',
-      images: [`/AppStore/${lang.toUpperCase()}/StoreImage.png`],
+      images: [`/AppStore/${lang.toUpperCase()}/og-image.jpg`],
     },
     appleWebApp: {
       capable: true,
