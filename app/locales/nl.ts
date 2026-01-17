@@ -49,6 +49,11 @@ const nl: Translations = {
     description:
       "Sudoku Ultimato bevat een themasysteem voor comfortabele lange speelsessies. Spelers kunnen kiezen uit Lichte Modus, Donkere Modus of Systeem Modus. Hoog contrast kleuren en duidelijke lettertypes maken patronen makkelijk te herkennen.",
   },
+  progress: {
+    title: "Volg Je Voortgang en Statistieken",
+    description:
+      "Monitor je Sudoku reis met uitgebreide voortgangsregistratie en gedetailleerde statistieken. Bekijk voltooiingspercentages, beste tijden en streaks voor alle moeilijkheidsgraden en spelmodi. Het voortgangsscherm toont je huidige puzzel, voltooide puzzels met prestatiemetingen en winpercentages. Statistieken geven inzicht in je speeltijd, favoriete moeilijkheidsgraad, langste streaks en algehele verbetering over tijd.",
+  },
   accessibility: {
     title: "Toegankelijkheid en Comfort",
     description:
@@ -222,8 +227,8 @@ const nl: Translations = {
     ],
   },
   metadata: {
-    title: "Sudoku Ultimato",
-    description: "Eindeloze Sudoku Puzzels",
+    title: "Sudoku Ultimato - Eindeloze Sudoku Puzzels voor iOS",
+    description: "Speel eindeloze Sudoku puzzels op iOS. Klassieke Sudoku, Killer Sudoku en grote 16x16 roosters. Dagelijkse uitdagingen, geen opdringerige advertenties, donkere modus. Gratis downloaden op App Store.",
   },
 };
 

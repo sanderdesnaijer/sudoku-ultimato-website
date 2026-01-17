@@ -53,6 +53,11 @@ const en: Translations = {
     description:
       "Sudoku Ultimato includes a theme system for comfortable long play sessions. Players can choose Light Mode, Dark Mode or follow System Mode. High contrast colors and clean fonts make patterns easy to spot.",
   },
+  progress: {
+    title: "Track Your Progress and Statistics",
+    description:
+      "Monitor your Sudoku journey with comprehensive progress tracking and detailed statistics. View completion rates, best times, and streaks across all difficulty levels and game modes. The progress screen shows your current puzzle, completed puzzles with performance metrics, and win rates. Statistics provide insights into your play time, favorite difficulty, longest streaks, and overall improvement over time.",
+  },
   accessibility: {
     title: "Accessibility and Player Comfort",
     description:
@@ -223,8 +228,8 @@ const en: Translations = {
     ],
   },
   metadata: {
-    title: "Sudoku Ultimato",
-    description: "Endless Sudoku Puzzles",
+    title: "Sudoku Ultimato - Endless Sudoku Puzzles for iOS",
+    description: "Play endless Sudoku puzzles on iOS. Classic Sudoku, Killer Sudoku, and giant 16x16 grids. Daily challenges, no intrusive ads, dark mode. Download free on App Store.",
   },
 };
 

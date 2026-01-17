@@ -1,9 +1,6 @@
-import Link from 'next/link';
 import { SUPPORTED_LANGS, messages, type Lang, DEFAULT_LANG } from '../../i18n';
-import { SUPPORT_EMAIL } from '../../constants';
 
 import type { Metadata } from 'next';
-import LanguageDropdown from '../../components/LanguageDropdown';
 
 import HomePage from '../../components/HomePage';
 

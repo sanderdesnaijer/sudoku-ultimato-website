@@ -31,6 +31,10 @@ export type Translations = {
     title: string;
     description: string;
   };
+  progress: {
+    title: string;
+    description: string;
+  };
   accessibility: {
     title: string;
     description: string;

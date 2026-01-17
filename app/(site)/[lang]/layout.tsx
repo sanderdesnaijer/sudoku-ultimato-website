@@ -32,10 +32,31 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       default: t.metadata.title,
     },
     description: t.metadata.description,
-    keywords: ["Sudoku", "Sudoku Ultimato", "Killer Sudoku", "Endless Puzzles", "Brain Game", "Advanced Sudoku"],
+    keywords: [
+      "Sudoku", 
+      "Sudoku Ultimato", 
+      "Killer Sudoku", 
+      "Endless Puzzles", 
+      "Brain Game", 
+      "Advanced Sudoku", 
+      "Sudoku App", 
+      "Classic Sudoku", 
+      "16x16 Sudoku", 
+      "Daily Sudoku", 
+      "Sudoku iOS", 
+      "Free Sudoku", 
+      "Logic Puzzle", 
+      "Sudoku Game",
+      "Mobile Sudoku",
+      "Sudoku No Ads",
+      "Sudoku Variants",
+    ],
     authors: [{ name: "Sander de Snaijer", url: "https://metsander.com" }],
     creator: "Sander de Snaijer",
     publisher: "Sander de Snaijer",
+    applicationName: "Sudoku Ultimato",
+    category: "Puzzle",
+    classification: "Games",
     formatDetection: {
       email: false,
       address: false,
@@ -44,8 +65,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     openGraph: {
       title: t.metadata.title,
       description: t.metadata.description,
-      url: `/${lang}/`,
-      siteName: t.metadata.title,
+      url: `/${lang === 'en' ? '' : lang + '/'}`,
+      siteName: "Sudoku Ultimato",
       locale: lang === 'nl' ? 'nl_NL' : lang === 'th' ? 'th_TH' : 'en_US',
       type: 'website',
       images: [
@@ -69,6 +90,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       statusBarStyle: 'default',
       title: t.metadata.title,
     },
+    appLinks: {
+      ios: {
+        url: 'https://apps.apple.com/us/app/sudoku-ultimato/id6755356402',
+        app_store_id: '6755356402',
+      },
+    },
     icons: {
       icon: [
         { url: '/favicon.ico' },
@@ -76,20 +103,41 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
       ],
       apple: [
-        { url: '/apple-touch-icon.png' },
+        { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      ],
+      other: [
+        { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+        { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
       ],
     },
     manifest: '/site.webmanifest',
     alternates: {
-      canonical: `/${lang}/`,
+      canonical: `/${lang === 'en' ? '' : lang + '/'}`,
       languages: {
-        'en': '/en/',
+        'en': '/',
         'nl': '/nl/',
         'th': '/th/',
       },
     },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+    },
     other: {
       'dns-prefetch': 'https://fonts.googleapis.com https://fonts.gstatic.com https://www.googletagmanager.com',
+      'mobile-web-app-capable': 'yes',
+      'apple-mobile-web-app-capable': 'yes',
+      'apple-mobile-web-app-status-bar-style': 'default',
     },
   };
 }
