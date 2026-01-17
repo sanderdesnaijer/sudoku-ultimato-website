@@ -233,9 +233,9 @@ const nl: Translations = {
     ],
   },
   metadata: {
-    title: "Sudoku Ultimato - Eindeloze Sudoku Puzzels voor iOS",
+    title: "Sudoku Ultimato - Eindeloze Klassieke & Killer Sudoku iOS",
     description:
-      "Speel eindeloze Sudoku puzzels op iOS. Klassieke Sudoku, Killer Sudoku en grote 16x16 roosters. Dagelijkse uitdagingen, geen opdringerige advertenties, donkere modus. Gratis downloaden op App Store.",
+      "Speel eindeloze Sudoku. Klassiek, Killer & 16x16 roosters. Dagelijkse uitdagingen, strak design, donkere modus. Gratis.",
   },
 };
 
