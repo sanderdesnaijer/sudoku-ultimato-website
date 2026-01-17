@@ -1,23 +1,23 @@
-import { messages, DEFAULT_LANG } from '../i18n';
-import HomePage from '../components/HomePage';
-import type { Metadata } from 'next';
+import { messages, DEFAULT_LANG } from "../i18n";
+import HomePage from "../components/HomePage";
+import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = messages[DEFAULT_LANG];
   return {
-    metadataBase: new URL('https://sudokuultimato.metsander.com'),
+    metadataBase: new URL("https://sudokuultimato.metsander.com"),
     title: t.metadata.title,
     description: t.metadata.description,
     openGraph: {
       title: t.metadata.title,
       description: t.metadata.description,
-      url: '/',
+      url: "/",
       siteName: t.metadata.title,
-      locale: 'en_US',
-      type: 'website',
+      locale: "en_US",
+      type: "website",
       images: [
         {
-          url: `/AppStore/${DEFAULT_LANG.toUpperCase()}/StoreImage.png`,
+          url: `/AppStore/${DEFAULT_LANG.toUpperCase()}/store-image-1284.webp`,
           width: 1284,
           height: 2778,
           alt: t.hero.imageAlt,
@@ -25,18 +25,18 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: t.metadata.title,
       description: t.metadata.description,
-      images: [`/AppStore/${DEFAULT_LANG.toUpperCase()}/StoreImage.png`],
+      images: [`/AppStore/${DEFAULT_LANG.toUpperCase()}/store-image-1284.webp`],
     },
     alternates: {
-      canonical: '/',
+      canonical: "/",
       languages: {
-        'en': '/',
-        'nl': '/nl/',
-        'th': '/th/',
-        'x-default': '/',
+        en: "/",
+        nl: "/nl/",
+        th: "/th/",
+        "x-default": "/",
       },
     },
   };

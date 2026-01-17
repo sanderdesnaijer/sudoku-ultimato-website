@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       images: [
         {
-          url: `/AppStore/${DEFAULT_LANG.toUpperCase()}/StoreImage.png`,
+          url: `/AppStore/${DEFAULT_LANG.toUpperCase()}/store-image-1284.webp`,
           width: 1284,
           height: 2778,
         },
@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: `${t.privacyPage.title} | ${t.metadata.title}`,
       description: `${t.privacyPage.title} - ${t.metadata.description}. Learn how Sudoku Ultimato collects, uses, and protects your information.`,
-      images: [`/AppStore/${DEFAULT_LANG.toUpperCase()}/StoreImage.png`],
+      images: [`/AppStore/${DEFAULT_LANG.toUpperCase()}/store-image-1284.webp`],
     },
     alternates: {
       canonical: `${WEBSITE_URL}/privacy/`,

@@ -1,20 +1,31 @@
-import { SUPPORTED_LANGS, messages, type Lang, DEFAULT_LANG } from '../../../i18n';
+import {
+  SUPPORTED_LANGS,
+  messages,
+  type Lang,
+  DEFAULT_LANG,
+} from "../../../i18n";
 
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
-import SupportPage from '../../../components/SupportPage';
+import SupportPage from "../../../components/SupportPage";
 
 export function generateStaticParams() {
-  return SUPPORTED_LANGS.filter(l => l !== DEFAULT_LANG).map((lang) => ({ lang }));
+  return SUPPORTED_LANGS.filter((l) => l !== DEFAULT_LANG).map((lang) => ({
+    lang,
+  }));
 }
 
 type Params = Promise<{ lang: Lang }>;
 
-export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata> {
   const { lang } = await params;
   const t = messages[lang];
   const isDefault = lang === DEFAULT_LANG;
-  const path = isDefault ? '/support/' : `/${lang}/support/`;
+  const path = isDefault ? "/support/" : `/${lang}/support/`;
 
   return {
     title: t.supportPage.title,
@@ -23,28 +34,28 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       title: `${t.supportPage.title} | ${t.metadata.title}`,
       description: t.supportPage.body,
       url: path,
-      type: 'website',
+      type: "website",
       images: [
         {
-          url: `/AppStore/${lang.toUpperCase()}/StoreImage.png`,
+          url: `/AppStore/${lang.toUpperCase()}/store-image-1284.webp`,
           width: 1284,
           height: 2778,
         },
       ],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: `${t.supportPage.title} | ${t.metadata.title}`,
       description: t.supportPage.body,
-      images: [`/AppStore/${lang.toUpperCase()}/StoreImage.png`],
+      images: [`/AppStore/${lang.toUpperCase()}/store-image-1284.webp`],
     },
     alternates: {
       canonical: path,
       languages: {
-        'en': '/support/',
-        'nl': '/nl/support/',
-        'th': '/th/support/',
-        'x-default': '/support/',
+        en: "/support/",
+        nl: "/nl/support/",
+        th: "/th/support/",
+        "x-default": "/support/",
       },
     },
   };
