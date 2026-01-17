@@ -20,67 +20,68 @@ export default function HomePage({ lang }: { lang: Lang }) {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "MobileApplication",
-    "name": "Sudoku Ultimato",
-    "description": t.hero.subtitle,
-    "applicationCategory": "GameApplication",
-    "operatingSystem": "iOS",
-    "offers": {
+    name: "Sudoku Ultimato",
+    description: t.hero.subtitle,
+    applicationCategory: "GameApplication",
+    operatingSystem: "iOS",
+    offers: {
       "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
+      price: "0",
+      priceCurrency: "USD",
     },
-    "aggregateRating": {
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": "5",
-      "ratingCount": "1"
+      ratingValue: "5",
+      ratingCount: "1",
     },
-    "url": "https://apps.apple.com/us/app/sudoku-ultimato/id6755356402",
-    "author": {
+    url: "https://apps.apple.com/us/app/sudoku-ultimato/id6755356402",
+    author: {
       "@type": "Person",
-      "name": "Sander de Snaijer",
-      "url": "https://metsander.com"
+      name: "Sander de Snaijer",
+      url: "https://metsander.com",
     },
-    "publisher": {
+    publisher: {
       "@type": "Organization",
-      "name": "metSander"
+      name: "metSander",
     },
-    "image": getImagePath("1284"),
-    "screenshot": [
+    image: getImagePath("1284"),
+    screenshot: [
       `/AppStore/${lang.toUpperCase()}/store-image-1284.webp`,
       `/AppStore/${lang.toUpperCase()}/game_classic.webp`,
       `/AppStore/${lang.toUpperCase()}/game_killer.webp`,
-      `/AppStore/${lang.toUpperCase()}/game_16x16.webp`
-    ]
+      `/AppStore/${lang.toUpperCase()}/game_16x16.webp`,
+    ],
   };
 
   const websiteStructuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Sudoku Ultimato",
-    "url": "https://sudokuultimato.metsander.com",
-    "description": t.hero.subtitle,
-    "inLanguage": lang,
-    "potentialAction": {
+    name: "Sudoku Ultimato",
+    url: "https://sudokuultimato.metsander.com",
+    description: t.hero.subtitle,
+    inLanguage: lang,
+    potentialAction: {
       "@type": "SearchAction",
-      "target": {
+      target: {
         "@type": "EntryPoint",
-        "urlTemplate": "https://apps.apple.com/us/app/sudoku-ultimato/id6755356402"
+        urlTemplate:
+          "https://apps.apple.com/us/app/sudoku-ultimato/id6755356402",
       },
-      "query-input": "required name=search_term_string"
-    }
+      "query-input": "required name=search_term_string",
+    },
   };
 
   const organizationStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "metSander",
-    "url": "https://metsander.com",
-    "logo": "https://sudokuultimato.metsander.com/apple-touch-icon.png",
-    "contactPoint": {
+    name: "metSander",
+    url: "https://metsander.com",
+    logo: "https://sudokuultimato.metsander.com/apple-touch-icon.png",
+    contactPoint: {
       "@type": "ContactPoint",
-      "email": SUPPORT_EMAIL,
-      "contactType": "Customer Support"
-    }
+      email: SUPPORT_EMAIL,
+      contactType: "Customer Support",
+    },
   };
 
   return (
@@ -92,11 +93,15 @@ export default function HomePage({ lang }: { lang: Lang }) {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteStructuredData),
+        }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationStructuredData),
+        }}
       />
       {/* Navigation */}
       <nav className="absolute top-6 right-6 z-50">
@@ -163,37 +168,56 @@ export default function HomePage({ lang }: { lang: Lang }) {
             </div>
           </div>
 
-          {/* Hero Image - Fixed dimensions to prevent CLS */}
+          {/* Hero Image - Three phone mockups */}
           <div
-            className="mt-10 sm:mt-16 relative z-10 w-full max-w-4xl mx-auto flex justify-center items-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 px-4 sm:px-0"
-            style={{ minHeight: "300px" }}
+            className="mt-10 sm:mt-16 relative z-10 w-full max-w-6xl mx-auto flex justify-center items-end gap-2 sm:gap-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 px-4 sm:px-6"
+            style={{ minHeight: "400px" }}
           >
-            <picture>
-              {/* Responsive images optimized for displayed size ~560px */}
-              {/* Mobile (small screens): 400px for 1x, 560px for 2x */}
-              <source
-                media="(max-width: 400px)"
-                srcSet={`${getImagePath("400")} 1x, ${getImagePath("560")} 2x`}
-                type="image/webp"
-              />
-              {/* All other screens: 560px for 1x, 1024px for 2x */}
-              <source
-                srcSet={`${getImagePath("560")} 1x, ${getImagePath("1024")} 2x`}
-                type="image/webp"
-              />
+            {/* Left phone - Killer Sudoku */}
+            <div className="flex-[1.1] transform rotate-[-8deg] translate-y-12 sm:translate-y-16 opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300">
               <img
-                src={getImagePath("560")}
-                alt={t.hero.imageAlt}
-                title={t.hero.imageTitle}
-                width={560}
-                height={606}
+                src={`/Website/${lang.toUpperCase()}/Killer.png`}
+                alt={t.hero.killerImageAlt}
+                title={t.hero.killerImageTitle}
+                width={393}
+                height={852}
+                loading="eager"
+                decoding="async"
+                className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
+                style={{ aspectRatio: "393/852" }}
+              />
+            </div>
+
+            {/* Center phone - Classic Sudoku (main focus) */}
+            <div className="flex-[1.2] z-10 transform hover:scale-105 transition-all duration-300">
+              <img
+                src={`/Website/${lang.toUpperCase()}/Classic.png`}
+                alt={t.hero.classicImageAlt}
+                title={t.hero.classicImageTitle}
+                width={393}
+                height={852}
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
-                className="w-full h-auto max-h-[600px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
-                style={{ aspectRatio: "560/606", contentVisibility: "auto" }}
+                className="w-full h-auto drop-shadow-[0_40px_80px_rgba(0,0,0,0.7)]"
+                style={{ aspectRatio: "393/852" }}
               />
-            </picture>
+            </div>
+
+            {/* Right phone - 16x16 Sudoku */}
+            <div className="flex-[1.1] transform rotate-[8deg] translate-y-12 sm:translate-y-16 opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300">
+              <img
+                src={`/Website/${lang.toUpperCase()}/16x16.png`}
+                alt={t.hero.largeImageAlt}
+                title={t.hero.largeImageTitle}
+                width={393}
+                height={852}
+                loading="eager"
+                decoding="async"
+                className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
+                style={{ aspectRatio: "393/852" }}
+              />
+            </div>
           </div>
         </header>
 
@@ -236,7 +260,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
         {/* Endless & Daily Grid */}
         <section className="py-16 px-6 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-neutral-900/50 p-10 rounded-3xl border border-white/5 hover:border-purple-500/20 transition-colors">
+            <div className="bg-neutral-900/50 p-10 py-4 rounded-3xl border border-white/5 hover:border-purple-500/20 transition-colors">
               <div className="w-full aspect-square bg-purple-500/20 rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
                 <img
                   src={`/AppStore/${lang.toUpperCase()}/mode.webp`}
@@ -256,7 +280,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
                 {t.endless.description}
               </p>
             </div>
-            <div className="bg-neutral-900/50 p-10 rounded-3xl border border-white/5 hover:border-blue-500/20 transition-colors">
+            <div className="bg-neutral-900/50 p-10 py-4 rounded-3xl border border-white/5 hover:border-blue-500/20 transition-colors">
               <div className="w-full aspect-square bg-blue-500/20 rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
                 <img
                   src={`/AppStore/${lang.toUpperCase()}/calendar.webp`}

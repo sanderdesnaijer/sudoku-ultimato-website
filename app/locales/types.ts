@@ -10,6 +10,12 @@ export type Translations = {
     availableSoon: string;
     imageAlt: string;
     imageTitle: string;
+    classicImageAlt: string;
+    classicImageTitle: string;
+    killerImageAlt: string;
+    killerImageTitle: string;
+    largeImageAlt: string;
+    largeImageTitle: string;
   };
   intro: {
     title: string;

@@ -18,6 +18,12 @@ const en: Translations = {
     availableSoon: "Available soon",
     imageAlt: "Sudoku Ultimato App Showcase",
     imageTitle: "Sudoku Ultimato App Showcase",
+    classicImageAlt: "Classic Sudoku mode",
+    classicImageTitle: "Classic Sudoku mode",
+    killerImageAlt: "Killer Sudoku mode",
+    killerImageTitle: "Killer Sudoku mode",
+    largeImageAlt: "16x16 Sudoku mode",
+    largeImageTitle: "16x16 Sudoku mode",
   },
   intro: {
     title: "What is Sudoku Ultimato",
@@ -66,10 +72,10 @@ const en: Translations = {
       "Zoom controls and pinch gestures",
       "Landscape mode",
       "Clear number visuals",
-      "Number first or cell first input modes",
+      "Quick input",
       "Haptic feedback",
-      "Number counts",
-      "Auto clean notes",
+      "Left Number count",
+      "Auto clear notes",
     ],
     note: "These features help both new and experienced players solve faster without strain.",
   },
@@ -229,7 +235,8 @@ const en: Translations = {
   },
   metadata: {
     title: "Sudoku Ultimato - Endless Sudoku Puzzles for iOS",
-    description: "Play endless Sudoku puzzles on iOS. Classic Sudoku, Killer Sudoku, and giant 16x16 grids. Daily challenges, no intrusive ads, dark mode. Download free on App Store.",
+    description:
+      "Play endless Sudoku puzzles on iOS. Classic Sudoku, Killer Sudoku, and giant 16x16 grids. Daily challenges, no intrusive ads, dark mode. Download free on App Store.",
   },
 };
 

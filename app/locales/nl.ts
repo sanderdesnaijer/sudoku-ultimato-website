@@ -14,6 +14,12 @@ const nl: Translations = {
     availableSoon: "Binnenkort beschikbaar",
     imageAlt: "Sudoku Ultimato App Overzicht",
     imageTitle: "Sudoku Ultimato App Overzicht",
+    classicImageAlt: "Klassieke Sudoku modus",
+    classicImageTitle: "Klassieke Sudoku modus",
+    killerImageAlt: "Killer Sudoku modus",
+    killerImageTitle: "Killer Sudoku modus",
+    largeImageAlt: "16x16 Sudoku modus",
+    largeImageTitle: "16x16 Sudoku modus",
   },
   intro: {
     title: "Wat is Sudoku Ultimato",
@@ -62,10 +68,10 @@ const nl: Translations = {
       "Zoom en knijpbewegingen",
       "Landschapsmodus",
       "Duidelijke nummervisuals",
-      "Nummer-eerst of cel-eerst invoermodi",
+      "Snelle invoer",
       "Haptische feedback",
-      "Nummertellingen",
-      "Notities automatisch opschonen",
+      "Linker nummertelling",
+      "Notities automatisch wissen",
     ],
     note: "Deze functies helpen zowel nieuwe als ervaren spelers sneller op te lossen zonder belasting.",
   },
@@ -228,7 +234,8 @@ const nl: Translations = {
   },
   metadata: {
     title: "Sudoku Ultimato - Eindeloze Sudoku Puzzels voor iOS",
-    description: "Speel eindeloze Sudoku puzzels op iOS. Klassieke Sudoku, Killer Sudoku en grote 16x16 roosters. Dagelijkse uitdagingen, geen opdringerige advertenties, donkere modus. Gratis downloaden op App Store.",
+    description:
+      "Speel eindeloze Sudoku puzzels op iOS. Klassieke Sudoku, Killer Sudoku en grote 16x16 roosters. Dagelijkse uitdagingen, geen opdringerige advertenties, donkere modus. Gratis downloaden op App Store.",
   },
 };
 
