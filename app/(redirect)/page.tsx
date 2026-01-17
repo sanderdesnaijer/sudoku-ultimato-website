@@ -17,10 +17,11 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       images: [
         {
-          url: `/AppStore/${DEFAULT_LANG.toUpperCase()}/store-image-1284.webp`,
-          width: 1284,
-          height: 2778,
+          url: `/AppStore/${DEFAULT_LANG.toUpperCase()}/og-image-clean.jpg`,
+          width: 1200,
+          height: 630,
           alt: t.hero.imageAlt,
+          type: "image/jpeg",
         },
       ],
     },
@@ -28,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: t.metadata.title,
       description: t.metadata.description,
-      images: [`/AppStore/${DEFAULT_LANG.toUpperCase()}/store-image-1284.webp`],
+      images: [`/AppStore/${DEFAULT_LANG.toUpperCase()}/og-image-clean.jpg`],
     },
     alternates: {
       canonical: "/",

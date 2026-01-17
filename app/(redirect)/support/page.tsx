@@ -8,6 +8,27 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `${t.supportPage.title} - ${t.hero.title}`,
     description: t.supportPage.body,
+    openGraph: {
+      title: `${t.supportPage.title} | ${t.metadata.title}`,
+      description: t.supportPage.body,
+      url: "/support/",
+      type: "website",
+      images: [
+        {
+          url: `/AppStore/${DEFAULT_LANG.toUpperCase()}/og-image-clean.jpg`,
+          width: 1200,
+          height: 630,
+          alt: t.hero.imageAlt,
+          type: "image/jpeg",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${t.supportPage.title} | ${t.metadata.title}`,
+      description: t.supportPage.body,
+      images: [`/AppStore/${DEFAULT_LANG.toUpperCase()}/og-image-clean.jpg`],
+    },
     alternates: {
       canonical: 'https://sudokuultimato.metsander.com/support/',
       languages: {
