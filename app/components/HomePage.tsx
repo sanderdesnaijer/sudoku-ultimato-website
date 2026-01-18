@@ -240,6 +240,25 @@ export default function HomePage({ lang }: { lang: Lang }) {
               </picture>
             </div>
           </div>
+
+          {/* Product Hunt Badge */}
+          <div className="mt-20 sm:mt-24 flex justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-600">
+            <a
+              href="https://www.producthunt.com/products/sudoku-ultimato?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-sudoku-ultimato"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <img
+                alt="Sudoku Ultimato - A calm Sudoku playground with Killer and big grids | Product Hunt"
+                width={250}
+                height={54}
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1064088&theme=light&t=1768723421839"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </div>
         </header>
 
         {/* Intro: What is Sudoku Ultimato */}
