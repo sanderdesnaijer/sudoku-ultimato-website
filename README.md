@@ -2,9 +2,12 @@
 
 Welcome to the official marketing website for **Sudoku Ultimato**, a high-performance, variant-rich Sudoku platform designed for enthusiasts and competitive players alike.
 
-## 🚀 Live Demo
+## 🚀 Live
 Experience the platform live at:  
 👉 [**https://sudokuultimato.metsander.com/**](https://sudokuultimato.metsander.com/)
+
+## Download Sudoku Ultimato
+👉 [**https://apps.apple.com/us/app/sudoku-ultimato/id6755356402**](App Store)
 
 ---
 
