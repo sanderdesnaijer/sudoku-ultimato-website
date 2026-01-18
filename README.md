@@ -1,5 +1,7 @@
 # Sudoku Ultimato
 
+![Sudoku Ultimato](public/AppStore/EN/store-image-1284.webp)
+
 Welcome to the official marketing website for **Sudoku Ultimato**, a high-performance, variant-rich Sudoku platform designed for enthusiasts and competitive players alike.
 
 ## 🚀 Live
