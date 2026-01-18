@@ -7,7 +7,7 @@ Experience the platform live at:
 👉 [**https://sudokuultimato.metsander.com/**](https://sudokuultimato.metsander.com/)
 
 ## Download Sudoku Ultimato
-👉 [**https://apps.apple.com/us/app/sudoku-ultimato/id6755356402**](App Store)
+👉 [**App Store**](https://apps.apple.com/us/app/sudoku-ultimato/id6755356402)
 
 ---
 
