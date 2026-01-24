@@ -124,6 +124,7 @@ const th: Translations = {
     privacy: "นโยบายความเป็นส่วนตัว",
     contact: "ติดต่อ",
     rights: "© 2026 Sudoku Ultimato สงวนลิขสิทธิ์",
+    availableIn: "พร้อมใช้งานใน English, Nederlands และ ไทย",
   },
   supportPage: {
     title: "ฝ่ายช่วยเหลือ",

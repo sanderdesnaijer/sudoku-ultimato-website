@@ -129,6 +129,7 @@ const en: Translations = {
     privacy: "Privacy Policy",
     contact: "Contact",
     rights: "© 2026 Sudoku Ultimato. All rights reserved.",
+    availableIn: "Available in English, Nederlands, and ไทย",
   },
   supportPage: {
     title: "Support",

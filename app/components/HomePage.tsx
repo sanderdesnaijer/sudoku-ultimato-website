@@ -530,6 +530,33 @@ export default function HomePage({ lang }: { lang: Lang }) {
             {t.footer.contact}
           </a>
         </nav>
+        {/* Language availability for SEO */}
+        <p className="text-neutral-500 text-xs mb-4">
+          {t.footer.availableIn.split(/(English|Nederlands|ไทย)/).map((part, i) => {
+            if (part === "English") {
+              return (
+                <Link key={i} href="/" className="text-neutral-400 hover:text-white transition-colors">
+                  English
+                </Link>
+              );
+            }
+            if (part === "Nederlands") {
+              return (
+                <Link key={i} href="/nl/" className="text-neutral-400 hover:text-white transition-colors">
+                  Nederlands
+                </Link>
+              );
+            }
+            if (part === "ไทย") {
+              return (
+                <Link key={i} href="/th/" className="text-neutral-400 hover:text-white transition-colors">
+                  ไทย
+                </Link>
+              );
+            }
+            return <span key={i}>{part}</span>;
+          })}
+        </p>
         <p className="text-neutral-400 text-xs">{t.footer.rights}</p>
       </footer>
     </div>

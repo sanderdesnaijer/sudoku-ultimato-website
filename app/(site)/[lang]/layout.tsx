@@ -113,11 +113,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     },
     manifest: '/site.webmanifest',
     alternates: {
-      canonical: `/${lang === 'en' ? '' : lang + '/'}`,
+      canonical: `https://sudokuultimato.metsander.com/${lang === 'en' ? '' : lang + '/'}`,
       languages: {
-        'en': '/',
-        'nl': '/nl/',
-        'th': '/th/',
+        'en': 'https://sudokuultimato.metsander.com/',
+        'nl': 'https://sudokuultimato.metsander.com/nl/',
+        'th': 'https://sudokuultimato.metsander.com/th/',
+        'x-default': 'https://sudokuultimato.metsander.com/',
       },
     },
     robots: {

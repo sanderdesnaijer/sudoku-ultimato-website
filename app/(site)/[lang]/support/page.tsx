@@ -4,9 +4,8 @@ import {
   type Lang,
   DEFAULT_LANG,
 } from "../../../i18n";
-
+import { WEBSITE_URL } from "../../../constants";
 import type { Metadata } from "next";
-
 import SupportPage from "../../../components/SupportPage";
 
 export function generateStaticParams() {
@@ -52,12 +51,12 @@ export async function generateMetadata({
       images: [`/AppStore/${lang.toUpperCase()}/og-image-clean.jpg`],
     },
     alternates: {
-      canonical: path,
+      canonical: `${WEBSITE_URL}${path}`,
       languages: {
-        en: "/support/",
-        nl: "/nl/support/",
-        th: "/th/support/",
-        "x-default": "/support/",
+        en: `${WEBSITE_URL}/support/`,
+        nl: `${WEBSITE_URL}/nl/support/`,
+        th: `${WEBSITE_URL}/th/support/`,
+        "x-default": `${WEBSITE_URL}/support/`,
       },
     },
   };

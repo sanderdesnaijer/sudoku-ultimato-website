@@ -128,6 +128,7 @@ const nl: Translations = {
     privacy: "Privacybeleid",
     contact: "Contact",
     rights: "© 2026 Sudoku Ultimato. Alle rechten voorbehouden.",
+    availableIn: "Beschikbaar in English, Nederlands en ไทย",
   },
   supportPage: {
     title: "Ondersteuning",
