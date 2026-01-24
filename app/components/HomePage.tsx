@@ -170,16 +170,16 @@ export default function HomePage({ lang }: { lang: Lang }) {
 
           {/* Hero Image - Three phone mockups */}
           <div
-            className="mt-10 sm:mt-16 relative z-10 w-full max-w-6xl mx-auto flex justify-center items-end gap-2 sm:gap-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 px-4 sm:px-6"
+            className="mt-10 sm:mt-16 relative z-10 w-full max-w-6xl mx-auto flex justify-center items-end gap-0 sm:gap-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 px-0 sm:px-6"
             style={{ minHeight: "400px" }}
           >
             {/* Left phone - Killer Sudoku */}
-            <div className="flex-[1.1] transform rotate-[-8deg] translate-y-12 sm:translate-y-16 opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300">
+            <div className="flex-[1.2] sm:flex-[1.1] transform rotate-[-8deg] translate-y-14 sm:translate-y-16 translate-x-6 sm:translate-x-0 opacity-85 hover:opacity-100 hover:scale-105 transition-all duration-300">
               <picture>
                 <source
                   srcSet={`/AppStore/${lang.toUpperCase()}/Killer-400w.webp 400w, /AppStore/${lang.toUpperCase()}/Killer-640w.webp 640w, /AppStore/${lang.toUpperCase()}/Killer.webp 863w`}
                   type="image/webp"
-                  sizes="(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 200px"
+                  sizes="(max-width: 640px) 35vw, (max-width: 1024px) 25vw, 200px"
                 />
                 <img
                   src={`/AppStore/${lang.toUpperCase()}/Killer.webp`}
@@ -196,12 +196,12 @@ export default function HomePage({ lang }: { lang: Lang }) {
             </div>
 
             {/* Center phone - Classic Sudoku (main focus) */}
-            <div className="flex-[1.2] z-10 transform hover:scale-105 transition-all duration-300">
+            <div className="flex-[1.6] sm:flex-[1.2] z-10 transform hover:scale-105 transition-all duration-300 -mx-6 sm:mx-0">
               <picture>
                 <source
                   srcSet={`/AppStore/${lang.toUpperCase()}/Classic-400w.webp 400w, /AppStore/${lang.toUpperCase()}/Classic-640w.webp 640w, /AppStore/${lang.toUpperCase()}/Classic.webp 863w`}
                   type="image/webp"
-                  sizes="(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 250px"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 30vw, 250px"
                 />
                 <img
                   src={`/AppStore/${lang.toUpperCase()}/Classic.webp`}
@@ -219,12 +219,12 @@ export default function HomePage({ lang }: { lang: Lang }) {
             </div>
 
             {/* Right phone - 16x16 Sudoku */}
-            <div className="flex-[1.1] transform rotate-[8deg] translate-y-12 sm:translate-y-16 opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300">
+            <div className="flex-[1.2] sm:flex-[1.1] transform rotate-[8deg] translate-y-14 sm:translate-y-16 -translate-x-6 sm:translate-x-0 opacity-85 hover:opacity-100 hover:scale-105 transition-all duration-300">
               <picture>
                 <source
                   srcSet={`/AppStore/${lang.toUpperCase()}/16x16-400w.webp 400w, /AppStore/${lang.toUpperCase()}/16x16-640w.webp 640w, /AppStore/${lang.toUpperCase()}/16x16.webp 863w`}
                   type="image/webp"
-                  sizes="(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 200px"
+                  sizes="(max-width: 640px) 35vw, (max-width: 1024px) 25vw, 200px"
                 />
                 <img
                   src={`/AppStore/${lang.toUpperCase()}/16x16.webp`}
