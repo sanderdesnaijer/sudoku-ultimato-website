@@ -132,8 +132,8 @@ const en: Translations = {
     support: "Support",
     privacy: "Privacy Policy",
     contact: "Contact",
+    developer: "Made by Sander de Snaijer",
     rights: "© 2026 Sudoku Ultimato. All rights reserved.",
-    availableIn: "Available in English, Nederlands, and ไทย",
   },
   supportPage: {
     title: "Support",

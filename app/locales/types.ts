@@ -67,8 +67,8 @@ export type Translations = {
     support: string;
     privacy: string;
     contact: string;
+    developer: string;
     rights: string;
-    availableIn: string;
   };
   supportPage: {
     title: string;

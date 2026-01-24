@@ -127,8 +127,8 @@ const th: Translations = {
     support: "ฝ่ายช่วยเหลือ",
     privacy: "นโยบายความเป็นส่วนตัว",
     contact: "ติดต่อ",
+    developer: "สร้างโดย Sander de Snaijer",
     rights: "© 2026 Sudoku Ultimato สงวนลิขสิทธิ์",
-    availableIn: "พร้อมใช้งานใน English, Nederlands และ ไทย",
   },
   supportPage: {
     title: "ฝ่ายช่วยเหลือ",

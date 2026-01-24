@@ -131,8 +131,8 @@ const nl: Translations = {
     support: "Ondersteuning",
     privacy: "Privacybeleid",
     contact: "Contact",
+    developer: "Gemaakt door Sander de Snaijer",
     rights: "© 2026 Sudoku Ultimato. Alle rechten voorbehouden.",
-    availableIn: "Beschikbaar in English, Nederlands en ไทย",
   },
   supportPage: {
     title: "Ondersteuning",
