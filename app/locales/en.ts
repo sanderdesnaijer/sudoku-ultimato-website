@@ -122,6 +122,10 @@ const en: Translations = {
         q: "Is there Dark Mode support?",
         a: "Yes. Light Mode, Dark Mode and System Mode are available.",
       },
+      {
+        q: "Which languages are supported?",
+        a: "Sudoku Ultimato is playable in English and also the following languages:\n🇺🇸 English\n🇳🇱 Nederlands\n🇹🇭 ไทย",
+      },
     ],
   },
   footer: {

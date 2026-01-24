@@ -121,6 +121,10 @@ const nl: Translations = {
         q: "Is er ondersteuning voor Donkere Modus?",
         a: "Ja. Lichte Modus, Donkere Modus en Systeem Modus zijn beschikbaar.",
       },
+      {
+        q: "Welke talen worden ondersteund?",
+        a: "Sudoku Ultimato is speelbaar in het Nederlands en ook de volgende talen:\n🇳🇱 Nederlands\n🇺🇸 English\n🇹🇭 ไทย",
+      },
     ],
   },
   footer: {

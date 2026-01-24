@@ -499,7 +499,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
                     </svg>
                   </span>
                 </summary>
-                <div className="px-6 pb-6 text-neutral-400 leading-relaxed">
+                <div className="px-6 pb-6 text-neutral-400 leading-relaxed whitespace-pre-line">
                   {item.a}
                 </div>
               </details>
