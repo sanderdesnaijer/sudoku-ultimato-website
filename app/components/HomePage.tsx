@@ -242,7 +242,8 @@ export default function HomePage({ lang }: { lang: Lang }) {
           </div>
 
           {/* Product Hunt Badge */}
-          <div className="mt-20 sm:mt-24 flex justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-600">
+          {/* Badge Links */}
+          <div className="mt-20 sm:mt-24 flex flex-col sm:flex-row justify-center items-center gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-600">
             <a
               href="https://www.producthunt.com/products/sudoku-ultimato?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-sudoku-ultimato"
               target="_blank"
@@ -254,6 +255,22 @@ export default function HomePage({ lang }: { lang: Lang }) {
                 width={250}
                 height={54}
                 src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1064088&theme=light&t=1768723421839"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <a
+              href="https://www.uneed.best/tool/sudoku-ultimato"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="https://www.uneed.best/EMBED3B.png"
+                alt="Uneed Embed Badge"
+                width={250}
+                height={54}
+                className="h-[54px] w-auto"
                 loading="lazy"
                 decoding="async"
               />
