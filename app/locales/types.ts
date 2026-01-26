@@ -86,5 +86,9 @@ export type Translations = {
     title: string;
     description: string;
   };
+  video: {
+    youtubeId: string;
+    title: string;
+  };
 };
 

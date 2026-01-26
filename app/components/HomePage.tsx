@@ -276,6 +276,22 @@ export default function HomePage({ lang }: { lang: Lang }) {
               />
             </a>
           </div>
+
+          {/* Video Section */}
+          <div className="mt-12 sm:mt-16 flex justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-700">
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10 hover:border-purple-500/30 transition-colors">
+              <iframe
+                width="315"
+                height="560"
+                src={`https://www.youtube.com/embed/${t.video.youtubeId}`}
+                title={t.video.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+                className="block"
+              />
+            </div>
+          </div>
         </header>
 
         {/* Intro: What is Sudoku Ultimato */}

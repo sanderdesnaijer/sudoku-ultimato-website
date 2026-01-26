@@ -243,6 +243,10 @@ const en: Translations = {
     description:
       "Play endless Sudoku puzzles. Classic, Killer & 16x16 grids. Daily challenges, clean interface, dark mode. Free iOS app.",
   },
+  video: {
+    youtubeId: "r9uxd65gljM",
+    title: "Watch Sudoku Ultimato in action",
+  },
 };
 
 export default en;
