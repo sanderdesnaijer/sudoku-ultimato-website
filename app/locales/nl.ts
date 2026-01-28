@@ -243,7 +243,7 @@ const nl: Translations = {
       "Speel eindeloze Sudoku. Klassiek, Killer & 16x16 roosters. Dagelijkse uitdagingen, strak design, donkere modus. Gratis.",
   },
   video: {
-    youtubeId: "r9uxd65gljM", // Fallback to EN video until NL video is available
+    youtubeId: "ZEhFKOoI0mE",
     title: "Bekijk Sudoku Ultimato in actie",
   },
 };
