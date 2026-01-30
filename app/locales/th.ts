@@ -239,7 +239,7 @@ const th: Translations = {
       "เล่นซูโดกุไม่จำกัด คลาสสิก คิลเลอร์ และ 16x16 ความท้าทายรายวัน ดีไซน์เรียบง่าย โหมดมืด ฟรี iOS",
   },
   video: {
-    youtubeId: "r9uxd65gljM", // Fallback to EN video until TH video is available
+    youtubeId: "dZ8YkkcTilg",
     title: "ดู Sudoku Ultimato ในการใช้งาน",
   },
 };
