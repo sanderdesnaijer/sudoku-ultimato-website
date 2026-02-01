@@ -139,33 +139,23 @@ export default function HomePage({ lang }: { lang: Lang }) {
               {t.hero.ctaApple}
             </a>
 
-            {/* Google Play Store Button (Disabled with visible badge) */}
-            <div className="relative group">
-              <button
-                disabled
-                className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-3 bg-white/5 text-white/40 border border-white/10 rounded-full font-semibold cursor-not-allowed transition-all relative"
+            {/* Google Play Store Button (Enabled) */}
+            <a
+              href="https://play.google.com/store/apps/details?id=com.metsander.sudoku"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-3 bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-500 hover:to-teal-500 text-white border border-green-500/50 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.4)] hover:scale-105 active:scale-95"
+            >
+              <svg
+                viewBox="0 0 512 512"
+                width="20"
+                height="20"
+                className="fill-current"
               >
-                <svg
-                  viewBox="0 0 512 512"
-                  width="20"
-                  height="20"
-                  className="fill-current"
-                >
-                  <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 58.9-34.1c18-10.3 28.5-25.9 28.5-40.4s-10.5-30.1-28.5-40.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z" />
-                </svg>
-                <span className="flex items-center gap-2">
-                  {t.hero.ctaGoogle}
-                  <span className="inline-block px-2 py-0.5 bg-neutral-700/80 text-neutral-300 text-[10px] rounded-full uppercase tracking-wider font-bold border border-white/10">
-                    {t.hero.availableSoon}
-                  </span>
-                </span>
-              </button>
-              {/* Tooltip for desktop hover */}
-              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-neutral-800 text-neutral-200 text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none whitespace-nowrap border border-white/10 shadow-xl translate-y-2 group-hover:translate-y-0 hidden sm:block">
-                {t.hero.availableSoon}
-                <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-neutral-800" />
-              </div>
-            </div>
+                <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 58.9-34.1c18-10.3 28.5-25.9 28.5-40.4s-10.5-30.1-28.5-40.4zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z" />
+              </svg>
+              {t.hero.ctaGoogle}
+            </a>
           </div>
 
           {/* Hero Image - Three phone mockups */}
