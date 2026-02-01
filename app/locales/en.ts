@@ -148,6 +148,7 @@ const en: Translations = {
     support: "Support",
     privacy: "Privacy Policy",
     contact: "Contact",
+    contactEmailSubject: "Question about Sudoku Ultimato",
     developer: "Made by Sander de Snaijer",
     rights: "© 2026 Sudoku Ultimato. All rights reserved.",
   },
@@ -262,6 +263,11 @@ const en: Translations = {
   video: {
     youtubeId: "r9uxd65gljM",
     title: "Watch Sudoku Ultimato in action",
+  },
+  cta: {
+    title: "Ready to Start Solving?",
+    subtitle:
+      "Download Sudoku Ultimato now and enjoy unlimited puzzles across Classic, Killer, and giant grid modes. Available free on iOS and Android.",
   },
 };
 

@@ -147,6 +147,7 @@ const nl: Translations = {
     support: "Ondersteuning",
     privacy: "Privacybeleid",
     contact: "Contact",
+    contactEmailSubject: "Vraag over Sudoku Ultimato",
     developer: "Gemaakt door Sander de Snaijer",
     rights: "© 2026 Sudoku Ultimato. Alle rechten voorbehouden.",
   },
@@ -261,6 +262,11 @@ const nl: Translations = {
   video: {
     youtubeId: "ZEhFKOoI0mE",
     title: "Bekijk Sudoku Ultimato in actie",
+  },
+  cta: {
+    title: "Klaar om te beginnen?",
+    subtitle:
+      "Download Sudoku Ultimato nu en geniet van onbeperkte puzzels in Klassieke, Killer en grote roostermodi. Gratis beschikbaar op iOS en Android.",
   },
 };
 

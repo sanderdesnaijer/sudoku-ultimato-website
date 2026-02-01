@@ -143,6 +143,7 @@ const th: Translations = {
     support: "ฝ่ายช่วยเหลือ",
     privacy: "นโยบายความเป็นส่วนตัว",
     contact: "ติดต่อ",
+    contactEmailSubject: "คำถามเกี่ยวกับ Sudoku Ultimato",
     developer: "สร้างโดย Sander de Snaijer",
     rights: "© 2026 Sudoku Ultimato สงวนลิขสิทธิ์",
   },
@@ -257,6 +258,11 @@ const th: Translations = {
   video: {
     youtubeId: "dZ8YkkcTilg",
     title: "ดู Sudoku Ultimato ในการใช้งาน",
+  },
+  cta: {
+    title: "พร้อมที่จะเริ่มแก้ปริศนาหรือยัง?",
+    subtitle:
+      "ดาวน์โหลด Sudoku Ultimato ตอนนี้และเพลิดเพลินกับปริศนาไม่จำกัดในโหมด Classic, Killer และตารางยักษ์ ฟรีบน iOS และ Android",
   },
 };
 

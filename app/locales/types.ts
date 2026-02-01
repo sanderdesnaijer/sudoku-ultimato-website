@@ -71,6 +71,7 @@ export type Translations = {
     support: string;
     privacy: string;
     contact: string;
+    contactEmailSubject: string;
     developer: string;
     rights: string;
   };
@@ -93,6 +94,10 @@ export type Translations = {
   video: {
     youtubeId: string;
     title: string;
+  };
+  cta: {
+    title: string;
+    subtitle: string;
   };
 };
 
