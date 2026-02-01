@@ -2,6 +2,7 @@ import Link from "next/link";
 import { messages, type Lang, DEFAULT_LANG } from "../i18n";
 import { SUPPORT_EMAIL } from "../constants";
 import LanguageDropdownWrapper from "./LanguageDropdownWrapper";
+import YouTubeFacade from "./YouTubeFacade";
 
 export default function HomePage({ lang }: { lang: Lang }) {
   const t = messages[lang];
@@ -230,10 +231,10 @@ export default function HomePage({ lang }: { lang: Lang }) {
                 <source
                   srcSet={`/AppStore/${lang.toUpperCase()}/Killer-400w.webp 400w, /AppStore/${lang.toUpperCase()}/Killer-640w.webp 640w, /AppStore/${lang.toUpperCase()}/Killer.webp 863w`}
                   type="image/webp"
-                  sizes="(max-width: 640px) 35vw, (max-width: 1024px) 25vw, 200px"
+                  sizes="(max-width: 640px) 216px, (max-width: 1024px) 25vw, 200px"
                 />
                 <img
-                  src={`/AppStore/${lang.toUpperCase()}/Killer.webp`}
+                  src={`/AppStore/${lang.toUpperCase()}/Killer-400w.webp`}
                   alt={t.hero.killerImageAlt}
                   title={t.hero.killerImageTitle}
                   width={400}
@@ -252,10 +253,10 @@ export default function HomePage({ lang }: { lang: Lang }) {
                 <source
                   srcSet={`/AppStore/${lang.toUpperCase()}/Classic-400w.webp 400w, /AppStore/${lang.toUpperCase()}/Classic-640w.webp 640w, /AppStore/${lang.toUpperCase()}/Classic.webp 863w`}
                   type="image/webp"
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 30vw, 250px"
+                  sizes="(max-width: 640px) 216px, (max-width: 1024px) 30vw, 250px"
                 />
                 <img
-                  src={`/AppStore/${lang.toUpperCase()}/Classic.webp`}
+                  src={`/AppStore/${lang.toUpperCase()}/Classic-400w.webp`}
                   alt={t.hero.classicImageAlt}
                   title={t.hero.classicImageTitle}
                   width={400}
@@ -275,10 +276,10 @@ export default function HomePage({ lang }: { lang: Lang }) {
                 <source
                   srcSet={`/AppStore/${lang.toUpperCase()}/16x16-400w.webp 400w, /AppStore/${lang.toUpperCase()}/16x16-640w.webp 640w, /AppStore/${lang.toUpperCase()}/16x16.webp 863w`}
                   type="image/webp"
-                  sizes="(max-width: 640px) 35vw, (max-width: 1024px) 25vw, 200px"
+                  sizes="(max-width: 640px) 216px, (max-width: 1024px) 25vw, 200px"
                 />
                 <img
-                  src={`/AppStore/${lang.toUpperCase()}/16x16.webp`}
+                  src={`/AppStore/${lang.toUpperCase()}/16x16-400w.webp`}
                   alt={t.hero.largeImageAlt}
                   title={t.hero.largeImageTitle}
                   width={400}
@@ -301,14 +302,22 @@ export default function HomePage({ lang }: { lang: Lang }) {
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
             >
-              <img
-                alt="Sudoku Ultimato - A calm Sudoku playground with Killer and big grids | Product Hunt"
-                width={250}
-                height={54}
-                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1064088&theme=light&t=1768723421839"
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source
+                  media="(max-width: 640px)"
+                  srcSet="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1064088&theme=light&t=1768723421839"
+                  width="200"
+                  height="43"
+                />
+                <img
+                  alt="Sudoku Ultimato - A calm Sudoku playground with Killer and big grids | Product Hunt"
+                  width={250}
+                  height={54}
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1064088&theme=light&t=1768723421839"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </a>
             <a
               href="https://www.uneed.best/tool/sudoku-ultimato"
@@ -316,31 +325,30 @@ export default function HomePage({ lang }: { lang: Lang }) {
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
             >
-              <img
-                src="https://www.uneed.best/EMBED3B.png"
-                alt="Uneed Embed Badge"
-                width={250}
-                height={54}
-                className="h-[54px] w-auto"
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source
+                  media="(max-width: 640px)"
+                  srcSet="https://www.uneed.best/EMBED3B.png"
+                  width="200"
+                  height="43"
+                />
+                <img
+                  src="https://www.uneed.best/EMBED3B.png"
+                  alt="Uneed Embed Badge"
+                  width={250}
+                  height={54}
+                  className="h-auto max-h-[54px] w-auto max-w-[250px]"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </a>
           </div>
 
           {/* Video Section */}
           <div className="mt-12 sm:mt-16 flex justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-700">
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10 hover:border-purple-500/30 transition-colors">
-              <iframe
-                width="315"
-                height="560"
-                src={`https://www.youtube-nocookie.com/embed/${t.video.youtubeId}`}
-                title={t.video.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="block"
-              />
+              <YouTubeFacade videoId={t.video.youtubeId} title={t.video.title} />
             </div>
           </div>
         </header>

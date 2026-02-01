@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  // Production optimizations
+  productionBrowserSourceMaps: false,
+  // Turbopack configuration (Next.js 16+)
+  // Note: Turbopack handles code splitting and optimization automatically
+  turbopack: {},
   // Note: For static exports, cache headers must be configured at the server/CDN level.
   // Recommended cache headers:
   // - Static assets (JS, CSS, fonts, images): Cache-Control: public, max-age=31536000, immutable
