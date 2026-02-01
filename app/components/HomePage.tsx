@@ -294,6 +294,44 @@ export default function HomePage({ lang }: { lang: Lang }) {
           </div>
         </section>
 
+        {/* Key Features */}
+        <section className="py-16 px-6 bg-neutral-900/30 relative overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-900/10 blur-[120px] rounded-full pointer-events-none" />
+          <div className="max-w-6xl mx-auto relative z-10">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-white bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
+              {t.features.title}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {t.features.items.map((feature: string, i: number) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-3 p-5 bg-neutral-900/50 rounded-2xl backdrop-blur-sm border border-white/5 hover:border-purple-500/30 transition-all duration-300 hover:bg-neutral-900/70 hover:-translate-y-1"
+                >
+                  <div className="flex-shrink-0 mt-1">
+                    <div className="w-5 h-5 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="w-3 h-3 text-white"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span className="text-neutral-200 leading-relaxed">
+                    {feature}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Modes */}
         <section className="py-16 px-6 bg-neutral-900/30">
           <div className="max-w-7xl mx-auto">

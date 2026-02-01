@@ -21,6 +21,10 @@ export type Translations = {
     title: string;
     description: string;
   };
+  features: {
+    title: string;
+    items: string[];
+  };
   modes: {
     title: string;
     items: {

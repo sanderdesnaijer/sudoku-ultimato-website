@@ -30,6 +30,22 @@ const en: Translations = {
     description:
       "Sudoku Ultimato is a modern Sudoku app that generates every puzzle instantly. Instead of a fixed library of premade boards, the app creates puzzles from seeds, which means the supply never runs out and difficulty stays consistent.\n\nPlayers can choose between different modes and board sizes, including Classic Sudoku and Killer Sudoku cages. For fast sessions there are small 4x4 boards. For long deep solving sessions there are giant 16x16 grids. Daily puzzles are available for streaks and personal progress.",
   },
+  features: {
+    title: "Key Features",
+    items: [
+      "Classic Sudoku and Killer Sudoku",
+      "Endless puzzles generated instantly from seeds",
+      "Daily challenge mode",
+      "Board sizes 4×4, 9×9, and 16×16",
+      "Light and dark themes",
+      "Accessibility options such as zoom, text size, and haptics",
+      "Landscape support on phones and tablets",
+      "Fast input with minimal distractions",
+      "Limited and non-intrusive ads",
+      "Available in English, Dutch, and Thai",
+      "Available on the App Store and Google Play",
+    ],
+  },
   modes: {
     title: "Multiple Sudoku Modes",
     items: {

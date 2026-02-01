@@ -26,6 +26,22 @@ const nl: Translations = {
     description:
       "Sudoku Ultimato is een moderne Sudoku app die elke puzzel direct genereert. In plaats van een vaste bibliotheek met vooraf gemaakte borden, creëert de app puzzels vanuit seeds, wat betekent dat de voorraad nooit opraakt en de moeilijkheidsgraad consistent blijft.\n\nSpelers kunnen kiezen uit verschillende modi en bordgroottes, waaronder Klassieke Sudoku en Killer Sudoku kooien. Voor snelle sessies zijn er kleine 4x4 borden. Voor lange, diepgaande oplossessies zijn er gigantische 16x16 roosters. Dagelijkse puzzels zijn beschikbaar voor streaks en persoonlijke voortgang.",
   },
+  features: {
+    title: "Belangrijkste Functies",
+    items: [
+      "Klassieke Sudoku en Killer Sudoku",
+      "Eindeloze puzzels direct gegenereerd vanuit seeds",
+      "Dagelijkse uitdagingsmodus",
+      "Bordgroottes 4×4, 9×9 en 16×16",
+      "Lichte en donkere thema's",
+      "Toegankelijkheidsopties zoals zoom, tekstgrootte en haptics",
+      "Landschapsondersteuning op telefoons en tablets",
+      "Snelle invoer met minimale afleidingen",
+      "Beperkte en niet-opdringerige advertenties",
+      "Beschikbaar in het Engels, Nederlands en Thai",
+      "Beschikbaar op de App Store en Google Play",
+    ],
+  },
   modes: {
     title: "Meerdere Sudoku Modi",
     items: {
