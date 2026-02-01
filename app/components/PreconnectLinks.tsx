@@ -8,6 +8,9 @@ export default function PreconnectLinks() {
           <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         </>
       )}
+      {/* YouTube preconnects for video embeds */}
+      <link rel="preconnect" href="https://www.youtube.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="https://i.ytimg.com" />
     </>
   );
 }

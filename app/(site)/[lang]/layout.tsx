@@ -140,6 +140,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       'mobile-web-app-capable': 'yes',
       'apple-mobile-web-app-capable': 'yes',
       'apple-mobile-web-app-status-bar-style': 'default',
+      'theme-color': '#0a0a0a',
+      'color-scheme': 'dark light',
+      'rating': 'general',
+      'distribution': 'global',
+      'revisit-after': '7 days',
+      'language': lang,
     },
   };
 }

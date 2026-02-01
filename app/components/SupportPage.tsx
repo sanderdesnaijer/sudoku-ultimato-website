@@ -11,8 +11,34 @@ export default function SupportPage({ lang }: { lang: Lang }) {
     return lang === DEFAULT_LANG ? '/' : `/${lang}/`;
   };
 
+  // BreadcrumbList structured data
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `https://sudokuultimato.metsander.com${getLocalizedHomePath()}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: t.supportPage.title,
+        item: `https://sudokuultimato.metsander.com${lang === DEFAULT_LANG ? '' : '/' + lang}/support/`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100 font-sans selection:bg-purple-500 selection:text-white flex flex-col">
+      {/* Breadcrumb Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
+      
        <header className="py-6 px-6 border-b border-white/5 flex justify-between items-center">
          <div className="max-w-7xl">
             <Link href={getLocalizedHomePath()} className="text-sm font-semibold text-neutral-400 hover:text-white transition-colors flex items-center gap-2">

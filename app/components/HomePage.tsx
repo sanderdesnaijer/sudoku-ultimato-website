@@ -23,7 +23,8 @@ export default function HomePage({ lang }: { lang: Lang }) {
     name: "Sudoku Ultimato",
     description: t.hero.subtitle,
     applicationCategory: "GameApplication",
-    operatingSystem: "iOS",
+    operatingSystem: "iOS 15.0 or later",
+    softwareVersion: "1.0.0",
     offers: {
       "@type": "Offer",
       price: "0",
@@ -35,6 +36,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
       ratingCount: "1",
     },
     url: "https://apps.apple.com/us/app/sudoku-ultimato/id6755356402",
+    downloadUrl: "https://apps.apple.com/us/app/sudoku-ultimato/id6755356402",
     author: {
       "@type": "Person",
       name: "Sander de Snaijer",
@@ -51,6 +53,18 @@ export default function HomePage({ lang }: { lang: Lang }) {
       `/AppStore/${lang.toUpperCase()}/game_killer.webp`,
       `/AppStore/${lang.toUpperCase()}/game_16x16.webp`,
     ],
+    featureList: [
+      "Classic Sudoku and Killer Sudoku modes",
+      "Multiple grid sizes: 4x4, 9x9, and 16x16",
+      "Endless procedurally generated puzzles",
+      "Daily challenge mode",
+      "Dark and light themes",
+      "Comprehensive accessibility features",
+    ],
+    softwareHelp: {
+      "@type": "CreativeWork",
+      url: `https://sudokuultimato.metsander.com${lang === DEFAULT_LANG ? '' : '/' + lang}/support/`,
+    },
   };
 
   const websiteStructuredData = {
@@ -84,6 +98,41 @@ export default function HomePage({ lang }: { lang: Lang }) {
     },
   };
 
+  // FAQ Structured Data for rich snippets
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: t.faq.items.map((item: { q: string; a: string }) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
+  // Video Structured Data
+  const videoStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: t.video.title,
+    description: t.hero.subtitle,
+    thumbnailUrl: `https://i.ytimg.com/vi/${t.video.youtubeId}/maxresdefault.jpg`,
+    uploadDate: "2025-01-15T00:00:00Z",
+    contentUrl: `https://www.youtube.com/watch?v=${t.video.youtubeId}`,
+    embedUrl: `https://www.youtube.com/embed/${t.video.youtubeId}`,
+    duration: "PT1M30S",
+    publisher: {
+      "@type": "Organization",
+      name: "metSander",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://sudokuultimato.metsander.com/apple-touch-icon.png",
+      },
+    },
+  };
+
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100 font-sans selection:bg-purple-500 selection:text-white">
       {/* Structured Data for SEO */}
@@ -101,6 +150,18 @@ export default function HomePage({ lang }: { lang: Lang }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(organizationStructuredData),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqStructuredData),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(videoStructuredData),
         }}
       />
       {/* Navigation */}
@@ -285,8 +346,8 @@ export default function HomePage({ lang }: { lang: Lang }) {
         </header>
 
         {/* Intro: What is Sudoku Ultimato */}
-        <section className="py-16 px-6 max-w-4xl mx-auto relative z-10 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-white">
+        <section className="py-16 px-6 max-w-4xl mx-auto relative z-10 text-center" aria-labelledby="intro-heading">
+          <h2 id="intro-heading" className="text-3xl sm:text-4xl font-bold mb-8 text-white">
             {t.intro.title}
           </h2>
           <div className="space-y-6 text-lg text-neutral-400 leading-relaxed whitespace-pre-line">
@@ -295,10 +356,10 @@ export default function HomePage({ lang }: { lang: Lang }) {
         </section>
 
         {/* Key Features */}
-        <section className="py-16 px-6 bg-neutral-900/30 relative overflow-hidden">
+        <section className="py-16 px-6 bg-neutral-900/30 relative overflow-hidden" aria-labelledby="features-heading">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-900/10 blur-[120px] rounded-full pointer-events-none" />
           <div className="max-w-6xl mx-auto relative z-10">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-white bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
+            <h2 id="features-heading" className="text-3xl sm:text-4xl font-bold mb-12 text-center text-white bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
               {t.features.title}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -333,9 +394,9 @@ export default function HomePage({ lang }: { lang: Lang }) {
         </section>
 
         {/* Modes */}
-        <section className="py-16 px-6 bg-neutral-900/30">
+        <section className="py-16 px-6 bg-neutral-900/30" aria-labelledby="modes-heading">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-16 text-center text-white bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
+            <h2 id="modes-heading" className="text-3xl sm:text-4xl font-bold mb-16 text-center text-white bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
               {t.modes.title}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -405,10 +466,10 @@ export default function HomePage({ lang }: { lang: Lang }) {
         </section>
 
         {/* Themes & Visuals */}
-        <section className="py-16 px-6 bg-neutral-900/30 relative overflow-hidden">
+        <section className="py-16 px-6 bg-neutral-900/30 relative overflow-hidden" aria-labelledby="themes-heading">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-900/10 blur-[100px] rounded-full pointer-events-none" />
           <div className="max-w-7xl mx-auto text-center relative z-10">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
+            <h2 id="themes-heading" className="text-3xl sm:text-4xl font-bold mb-6 text-white">
               {t.themes.title}
             </h2>
             <p className="text-lg text-neutral-400 leading-relaxed mb-10 max-w-2xl mx-auto">
@@ -444,10 +505,10 @@ export default function HomePage({ lang }: { lang: Lang }) {
         </section>
 
         {/* Progress & Statistics */}
-        <section className="py-16 px-6 bg-neutral-900/30 relative overflow-hidden">
+        <section className="py-16 px-6 bg-neutral-900/30 relative overflow-hidden" aria-labelledby="progress-heading">
           <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-900/10 blur-[100px] rounded-full pointer-events-none" />
           <div className="max-w-7xl mx-auto text-center relative z-10">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
+            <h2 id="progress-heading" className="text-3xl sm:text-4xl font-bold mb-6 text-white">
               {t.progress.title}
             </h2>
             <p className="text-lg text-neutral-400 leading-relaxed mb-10 max-w-2xl mx-auto">
@@ -483,10 +544,10 @@ export default function HomePage({ lang }: { lang: Lang }) {
         </section>
 
         {/* Accessibility */}
-        <section className="py-16 px-6 max-w-7xl mx-auto">
+        <section className="py-16 px-6 max-w-7xl mx-auto" aria-labelledby="accessibility-heading">
           <div className="bg-neutral-900/50 rounded-[3rem] p-8 sm:p-16 border border-white/5 relative overflow-hidden">
             <div className="relative z-10">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white text-center sm:text-left">
+              <h2 id="accessibility-heading" className="text-3xl sm:text-4xl font-bold mb-6 text-white text-center sm:text-left">
                 {t.accessibility.title}
               </h2>
               <p className="text-lg text-neutral-400 mb-10 max-w-2xl text-center sm:text-left">
@@ -504,7 +565,13 @@ export default function HomePage({ lang }: { lang: Lang }) {
                 ))}
               </div>
               <p className="text-neutral-400 mt-10 text-sm font-medium">
-                {t.accessibility.note}
+                {t.accessibility.note} {' '}
+                <Link 
+                  href={getLocalizedPath("/support/")}
+                  className="text-purple-400 hover:text-purple-300 underline transition-colors"
+                >
+                  Contact support
+                </Link> for assistance with accessibility features.
               </p>
             </div>
           </div>
@@ -526,15 +593,21 @@ export default function HomePage({ lang }: { lang: Lang }) {
                 {t.noAds.title}
               </h3>
               <p className="text-neutral-300 leading-relaxed">
-                {t.noAds.description}
+                {t.noAds.description} Learn more about our{' '}
+                <Link 
+                  href={getLocalizedPath("/privacy/")}
+                  className="text-purple-400 hover:text-purple-300 underline transition-colors"
+                >
+                  privacy practices
+                </Link>.
               </p>
             </div>
           </div>
         </section>
 
         {/* FAQ */}
-        <section className="py-16 px-6 max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-16 text-white">
+        <section className="py-16 px-6 max-w-3xl mx-auto" aria-labelledby="faq-heading">
+          <h2 id="faq-heading" className="text-3xl font-bold text-center mb-16 text-white">
             {t.faq.title}
           </h2>
           <div className="space-y-4">

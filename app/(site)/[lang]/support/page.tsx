@@ -27,6 +27,7 @@ export async function generateMetadata({
   const path = isDefault ? "/support/" : `/${lang}/support/`;
 
   return {
+    metadataBase: new URL(WEBSITE_URL),
     title: t.supportPage.title,
     description: t.supportPage.body,
     openGraph: {

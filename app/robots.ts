@@ -10,7 +10,13 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/', '/_next/'],
       },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        crawlDelay: 0,
+      },
     ],
     sitemap: 'https://sudokuultimato.metsander.com/sitemap.xml',
+    host: 'https://sudokuultimato.metsander.com',
   }
 }
