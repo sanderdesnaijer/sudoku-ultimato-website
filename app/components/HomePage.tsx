@@ -121,7 +121,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
     thumbnailUrl: `https://i.ytimg.com/vi/${t.video.youtubeId}/maxresdefault.jpg`,
     uploadDate: "2025-01-15T00:00:00Z",
     contentUrl: `https://www.youtube.com/watch?v=${t.video.youtubeId}`,
-    embedUrl: `https://www.youtube.com/embed/${t.video.youtubeId}`,
+    embedUrl: `https://www.youtube-nocookie.com/embed/${t.video.youtubeId}`,
     duration: "PT1M30S",
     publisher: {
       "@type": "Organization",
@@ -236,12 +236,12 @@ export default function HomePage({ lang }: { lang: Lang }) {
                   src={`/AppStore/${lang.toUpperCase()}/Killer.webp`}
                   alt={t.hero.killerImageAlt}
                   title={t.hero.killerImageTitle}
-                  width={393}
-                  height={852}
+                  width={400}
+                  height={805}
                   loading="eager"
                   decoding="async"
                   className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
-                  style={{ aspectRatio: "393/852" }}
+                  style={{ aspectRatio: "400/805" }}
                 />
               </picture>
             </div>
@@ -258,13 +258,13 @@ export default function HomePage({ lang }: { lang: Lang }) {
                   src={`/AppStore/${lang.toUpperCase()}/Classic.webp`}
                   alt={t.hero.classicImageAlt}
                   title={t.hero.classicImageTitle}
-                  width={393}
-                  height={852}
+                  width={400}
+                  height={805}
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
                   className="w-full h-auto drop-shadow-[0_40px_80px_rgba(0,0,0,0.7)]"
-                  style={{ aspectRatio: "393/852" }}
+                  style={{ aspectRatio: "400/805" }}
                 />
               </picture>
             </div>
@@ -281,12 +281,12 @@ export default function HomePage({ lang }: { lang: Lang }) {
                   src={`/AppStore/${lang.toUpperCase()}/16x16.webp`}
                   alt={t.hero.largeImageAlt}
                   title={t.hero.largeImageTitle}
-                  width={393}
-                  height={852}
+                  width={400}
+                  height={805}
                   loading="eager"
                   decoding="async"
                   className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
-                  style={{ aspectRatio: "393/852" }}
+                  style={{ aspectRatio: "400/805" }}
                 />
               </picture>
             </div>
@@ -334,7 +334,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
               <iframe
                 width="315"
                 height="560"
-                src={`https://www.youtube.com/embed/${t.video.youtubeId}`}
+                src={`https://www.youtube-nocookie.com/embed/${t.video.youtubeId}`}
                 title={t.video.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
