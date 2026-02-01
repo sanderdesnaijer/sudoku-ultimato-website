@@ -655,29 +655,29 @@ export default function HomePage({ lang }: { lang: Lang }) {
         <nav className="flex justify-center gap-8 mb-8 flex-wrap">
           <Link
             href={getLocalizedPath("/support/")}
-            className="text-neutral-400 hover:text-white transition-colors text-sm uppercase tracking-widest"
+            className="text-neutral-300 hover:text-white transition-colors text-sm uppercase tracking-widest"
           >
             {t.footer.support}
           </Link>
           <Link
             href={getLocalizedPath("/privacy/")}
-            className="text-neutral-400 hover:text-white transition-colors text-sm uppercase tracking-widest"
+            className="text-neutral-300 hover:text-white transition-colors text-sm uppercase tracking-widest"
           >
             {t.footer.privacy}
           </Link>
           <a
             href={`mailto:${SUPPORT_EMAIL}`}
-            className="text-neutral-400 hover:text-white transition-colors text-sm uppercase tracking-widest"
+            className="text-neutral-300 hover:text-white transition-colors text-sm uppercase tracking-widest"
           >
             {t.footer.contact}
           </a>
         </nav>
-        <p className="text-neutral-400 text-xs">{t.footer.rights}</p>
+        <p className="text-neutral-300 text-xs">{t.footer.rights}</p>
         <a
           href="https://www.sanderdesnaijer.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="group inline-flex items-center gap-2 text-neutral-500 text-xs mt-4 hover:text-neutral-300 transition-colors"
+          className="group inline-flex items-center gap-2 text-neutral-300 text-xs mt-4 hover:text-white transition-colors"
         >
           <img
             src="/logo-scc.svg"
