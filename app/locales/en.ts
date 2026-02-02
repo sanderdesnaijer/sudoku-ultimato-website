@@ -10,7 +10,7 @@ const en: Translations = {
     selectLanguage: "Select Language",
   },
   hero: {
-    title: "Sudoku Ultimato - Endless Sudoku Puzzles",
+    title: "Sudoku Ultimato - Free Classic & Killer Sudoku Puzzles",
     subtitle:
       "Sudoku without limits. Play Classic Sudoku, Killer Sudoku, and giant grids with a clean interface and endless puzzles. Designed for both casual players and experts.",
     ctaApple: "Download on iOS",
