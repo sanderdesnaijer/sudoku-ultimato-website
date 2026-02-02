@@ -6,7 +6,7 @@ const th: Translations = {
     selectLanguage: "เลือกภาษา",
   },
   hero: {
-    title: "Sudoku Ultimato - เกมปริศนาซูโดกุ",
+    title: "Sudoku Ultimato - ปริศนาซูโดกุคลาสสิกและคิลเลอร์ฟรี",
     subtitle:
       "ซูโดกุแบบไร้ขีดจำกัด เล่น Classic Sudoku, Killer Sudoku และตารางขนาดยักษ์ มาพร้อมอินเทอร์เฟซที่สะอาดตาและปริศนาที่ไม่มีวันหมด",
     ctaApple: "ดาวน์โหลดบน iOS",

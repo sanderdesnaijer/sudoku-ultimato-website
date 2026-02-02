@@ -1,5 +1,6 @@
 # Cache headers for static assets
 # Compatible with Netlify, Cloudflare Pages, and other platforms
+# Note: Redirects are in _redirects file
 
 # Next.js static assets - cache for 1 year (immutable)
 /_next/static/*
@@ -74,4 +75,3 @@
   
 /th/
   Cache-Control: public, max-age=0, must-revalidate
-

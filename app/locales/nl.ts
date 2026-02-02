@@ -6,7 +6,7 @@ const nl: Translations = {
     selectLanguage: "Taal selecteren",
   },
   hero: {
-    title: "Sudoku Ultimato - Eindeloze Sudoku Puzzels",
+    title: "Sudoku Ultimato - Gratis Klassieke & Killer Sudoku Puzzels",
     subtitle:
       "Sudoku zonder grenzen. Speel Klassieke Sudoku, Killer Sudoku en gigantische roosters met een heldere interface en eindeloze puzzels.",
     ctaApple: "Download op iOS",
