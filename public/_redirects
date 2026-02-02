@@ -1,0 +1,6 @@
+# 301 Redirects: /en/ paths to root (English is the default language at /)
+# Compatible with Netlify, Cloudflare Pages, and similar platforms
+
+/en/          /           301
+/en/privacy/  /privacy/   301
+/en/support/  /support/   301

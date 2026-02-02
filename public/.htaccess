@@ -1,6 +1,20 @@
 # Apache cache headers for performance optimization
 # This file provides cache headers for static assets
 
+# 301 Redirects: /en/ paths to root (English is the default language at /)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Redirect /en/ to /
+  RewriteRule ^en/?$ / [R=301,L]
+  
+  # Redirect /en/privacy/ to /privacy/
+  RewriteRule ^en/privacy/?$ /privacy/ [R=301,L]
+  
+  # Redirect /en/support/ to /support/
+  RewriteRule ^en/support/?$ /support/ [R=301,L]
+</IfModule>
+
 <IfModule mod_headers.c>
   # Static assets - cache for 1 year
   <FilesMatch "\.(js|css|woff2|woff|ttf|eot|svg|png|jpg|jpeg|gif|webp|avif|ico)$">

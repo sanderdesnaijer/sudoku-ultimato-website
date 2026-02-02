@@ -5,6 +5,8 @@ export const dynamic = 'force-static'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://sudokuultimato.metsander.com'
   
+  // Note: English (en) uses root URLs (/) not /en/ paths
+  // hreflang uses 'x-default' pointing to root for English
   return [
     {
       url: baseUrl,
@@ -13,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
       alternates: {
         languages: {
-          en: `${baseUrl}/`,
+          'x-default': `${baseUrl}/`,
           nl: `${baseUrl}/nl/`,
           th: `${baseUrl}/th/`,
         },
@@ -38,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
       alternates: {
         languages: {
-          en: `${baseUrl}/privacy/`,
+          'x-default': `${baseUrl}/privacy/`,
           nl: `${baseUrl}/nl/privacy/`,
           th: `${baseUrl}/th/privacy/`,
         },
@@ -63,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
       alternates: {
         languages: {
-          en: `${baseUrl}/support/`,
+          'x-default': `${baseUrl}/support/`,
           nl: `${baseUrl}/nl/support/`,
           th: `${baseUrl}/th/support/`,
         },
