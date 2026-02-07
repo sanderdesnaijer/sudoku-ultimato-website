@@ -9,12 +9,22 @@ const FLAGS: Record<Lang, string> = {
   en: '🇺🇸',
   nl: '🇳🇱',
   th: '🇹🇭',
+  de: '🇩🇪',
+  es: '🇪🇸',
+  fr: '🇫🇷',
+  pt: '🇧🇷',
+  it: '🇮🇹',
 };
 
 const LABELS: Record<Lang, string> = {
   en: 'English',
   nl: 'Nederlands',
   th: 'ไทย',
+  de: 'Deutsch',
+  es: 'Español',
+  fr: 'Français',
+  pt: 'Português',
+  it: 'Italiano',
 };
 
 export default function LanguageDropdown({ currentLang }: { currentLang: Lang }) {

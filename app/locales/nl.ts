@@ -38,7 +38,7 @@ const nl: Translations = {
       "Landschapsondersteuning op telefoons en tablets",
       "Snelle invoer met minimale afleidingen",
       "Beperkte en niet-opdringerige advertenties",
-      "Beschikbaar in het Engels, Nederlands en Thai",
+      "Beschikbaar in het Engels, Nederlands, Thai en meer",
       "Beschikbaar op de App Store en Google Play",
     ],
   },
@@ -139,7 +139,7 @@ const nl: Translations = {
       },
       {
         q: "Welke talen worden ondersteund?",
-        a: "Sudoku Ultimato is speelbaar in het Nederlands en ook de volgende talen:\n🇳🇱 Nederlands\n🇺🇸 English\n🇹🇭 ไทย",
+        a: "Sudoku Ultimato is speelbaar in het Nederlands en ook de volgende talen:\n🇳🇱 Nederlands\n🇺🇸 English\n🇹🇭 ไทย\n🇩🇪 Deutsch\n🇪🇸 Español\n🇫🇷 Français\n🇧🇷 Português\n🇮🇹 Italiano",
       },
     ],
   },
