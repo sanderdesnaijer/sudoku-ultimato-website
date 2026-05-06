@@ -252,6 +252,7 @@ const th: Translations = {
   },
   metadata: {
     title: "Sudoku Ultimato - ซูโดกุไม่จำกัดคลาสสิกและคิลเลอร์สำหรับ iOS",
+    brand: "Sudoku Ultimato",
     description:
       "เล่นซูโดกุไม่จำกัด คลาสสิก คิลเลอร์ และ 16x16 ความท้าทายรายวัน ดีไซน์เรียบง่าย โหมดมืด ฟรี iOS",
   },

@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     metadataBase: new URL('https://sudokuultimato.metsander.com'),
     title: {
-      template: `%s | ${t.metadata.title}`,
+      template: `%s | ${t.metadata.brand}`,
       default: t.metadata.title,
     },
     description: t.metadata.description,

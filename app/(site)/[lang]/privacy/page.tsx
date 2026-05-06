@@ -28,10 +28,10 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(WEBSITE_URL),
-    title: `${t.privacyPage.title} | ${t.metadata.title}`,
+    title: `${t.privacyPage.title} | ${t.metadata.brand}`,
     description: `${t.privacyPage.title} - ${t.metadata.description}. Learn how Sudoku Ultimato collects, uses, and protects your information.`,
     openGraph: {
-      title: `${t.privacyPage.title} | ${t.metadata.title}`,
+      title: `${t.privacyPage.title} | ${t.metadata.brand}`,
       description: `${t.privacyPage.title} - ${t.metadata.description}. Learn how Sudoku Ultimato collects, uses, and protects your information.`,
       url: path,
       type: "website",
@@ -47,7 +47,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${t.privacyPage.title} | ${t.metadata.title}`,
+      title: `${t.privacyPage.title} | ${t.metadata.brand}`,
       description: `${t.privacyPage.title} - ${t.metadata.description}. Learn how Sudoku Ultimato collects, uses, and protects your information.`,
       images: [`/AppStore/${lang.toUpperCase()}/og-image-clean.jpg`],
     },

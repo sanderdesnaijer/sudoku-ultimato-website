@@ -7,10 +7,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = messages[DEFAULT_LANG];
   return {
     metadataBase: new URL(WEBSITE_URL),
-    title: `${t.privacyPage.title} | ${t.metadata.title}`,
+    title: `${t.privacyPage.title} | ${t.metadata.brand}`,
     description: `${t.privacyPage.title} - ${t.metadata.description}. Learn how Sudoku Ultimato collects, uses, and protects your information.`,
     openGraph: {
-      title: `${t.privacyPage.title} | ${t.metadata.title}`,
+      title: `${t.privacyPage.title} | ${t.metadata.brand}`,
       description: `${t.privacyPage.title} - ${t.metadata.description}. Learn how Sudoku Ultimato collects, uses, and protects your information.`,
       url: "/privacy/",
       type: "website",
@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${t.privacyPage.title} | ${t.metadata.title}`,
+      title: `${t.privacyPage.title} | ${t.metadata.brand}`,
       description: `${t.privacyPage.title} - ${t.metadata.description}. Learn how Sudoku Ultimato collects, uses, and protects your information.`,
       images: [`/AppStore/${DEFAULT_LANG.toUpperCase()}/og-image-clean.jpg`],
     },

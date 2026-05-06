@@ -31,7 +31,7 @@ export async function generateMetadata({
     title: t.supportPage.title,
     description: t.supportPage.body,
     openGraph: {
-      title: `${t.supportPage.title} | ${t.metadata.title}`,
+      title: `${t.supportPage.title} | ${t.metadata.brand}`,
       description: t.supportPage.body,
       url: path,
       type: "website",
@@ -47,7 +47,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${t.supportPage.title} | ${t.metadata.title}`,
+      title: `${t.supportPage.title} | ${t.metadata.brand}`,
       description: t.supportPage.body,
       images: [`/AppStore/${lang.toUpperCase()}/og-image-clean.jpg`],
     },

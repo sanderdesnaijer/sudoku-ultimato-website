@@ -257,6 +257,7 @@ const en: Translations = {
   },
   metadata: {
     title: "Sudoku Ultimato - Endless Classic & Killer Sudoku for iOS",
+    brand: "Sudoku Ultimato",
     description:
       "Play endless Sudoku puzzles. Classic, Killer & 16x16 grids. Daily challenges, clean interface, dark mode. Free iOS app.",
   },
