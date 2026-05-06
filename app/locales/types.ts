@@ -89,6 +89,7 @@ export type Translations = {
   };
   metadata: {
     title: string;
+    brand: string;
     description: string;
   };
   video: {

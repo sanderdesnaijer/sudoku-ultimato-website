@@ -6,10 +6,10 @@ import type { Metadata } from 'next';
 export async function generateMetadata(): Promise<Metadata> {
   const t = messages[DEFAULT_LANG];
   return {
-    title: `${t.supportPage.title} - ${t.hero.title}`,
+    title: `${t.supportPage.title} | ${t.metadata.brand}`,
     description: t.supportPage.body,
     openGraph: {
-      title: `${t.supportPage.title} | ${t.metadata.title}`,
+      title: `${t.supportPage.title} | ${t.metadata.brand}`,
       description: t.supportPage.body,
       url: "/support/",
       type: "website",
@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${t.supportPage.title} | ${t.metadata.title}`,
+      title: `${t.supportPage.title} | ${t.metadata.brand}`,
       description: t.supportPage.body,
       images: [`/AppStore/${DEFAULT_LANG.toUpperCase()}/og-image-clean.jpg`],
     },
