@@ -1,90 +1,50 @@
 # Sudoku Ultimato
 
+Marketing website for **Sudoku Ultimato**, a variant-rich Sudoku app with procedural puzzle generation, multiple grid sizes, and multilingual support.
+
 ![Sudoku Ultimato](public/AppStore/EN/store-image-1284.webp)
 
-Welcome to the official marketing website for **Sudoku Ultimato**, a high-performance, variant-rich Sudoku platform designed for enthusiasts and competitive players alike.
+- **Website:** [sudokuultimato.metsander.com](https://sudokuultimato.metsander.com/)
+- **App Store:** [Download on the App Store](https://apps.apple.com/us/app/sudoku-ultimato/id6755356402)
+- **Play Store:** [Download on Google Play](https://play.google.com/store/apps/details?id=com.metsander.sudoku)
+- **Project:** [sanderdesnaijer.com/projects/sudoku-ultimato](https://sanderdesnaijer.com/projects/sudoku-ultimato)
+- **Blog post:** [Building a Multilanguage Sudoku App with Flutter](https://sanderdesnaijer.com/blog/building-multilanguage-sudoku-app-flutter)
 
-## 🚀 Live
-Experience the platform live at:  
-👉 [**https://sudokuultimato.metsander.com/**](https://sudokuultimato.metsander.com/)
+## About
 
-## Download Sudoku Ultimato
-👉 [**App Store**](https://apps.apple.com/us/app/sudoku-ultimato/id6755356402)
+Sudoku Ultimato supports Classic and Killer Sudoku across three grid sizes (4x4 Mini, 9x9 Classic, 16x16 Giant). Every puzzle is generated on-the-fly using a deterministic seed system. The app supports English, Dutch, Thai, German, French, Spanish, Italian, and Portuguese.
 
----
+## Tech stack (website)
 
-## 🧩 About Sudoku Ultimato
-**Sudoku Ultimato** is not just another grid game. It emphasizes deterministic procedural generation, non-blocking background computation, and a highly customizable user experience. Whether you're solving a quick 4x4 mini-grid sor a complex 16x16 "Giant" Killer variant, our engine ensures a smooth and challenging experience.
+- **[Next.js](https://nextjs.org/)** / App Router, static export
+- **[Tailwind CSS 4](https://tailwindcss.com/)** / utility-first styling
+- **[TypeScript](https://www.typescriptlang.org/)** / end-to-end type safety
+- **i18n** / multi-language support with localized routing and SEO
 
-### Key Game Features:
-- **Variant Support**: Classic Sudoku and Killer Sudoku (Sum Cages).
-- **Multiple Grid Sizes**: 4x4 (Mini), 9x9 (Classic), and 16x16 (Giant).
-- **Procedural Generation**: Every level is generated on-the-fly using a unique seed system.
-- **Multilingual**: Supports English, Dutch, and Thai.
-- **Responsive HUD**: Optimized for both portrait and landscape play.
+## Getting started
 
----
+```bash
+npm install
+npm run dev
+```
 
-## 💻 Tech Stack
-This marketing website is built using modern web technologies to ensure speed, SEO optimization, and a premium user experience:
+Open [http://localhost:3000](http://localhost:3000).
 
-- **Framework**: [Next.js](https://nextjs.org/) (App Router)
-- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **UI Components**: Modern, responsive, and accessible components.
-- **i18n**: Multi-language support with localized routing and SEO.
+## Build
 
----
-
-## 🛠 Getting Started
-
-### Prerequisites
-- Node.js 18+ 
-- npm / yarn / pnpm
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/sudoku-ultimato-website.git
-   cd sudoku-ultimato-website
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Deployment
-The project is configured for a static export. To build the project:
 ```bash
 npm run build
 ```
-The output will be in the `out` directory.
 
-To preview the production build locally:
-```bash
-npx serve@latest out
-```
+Output goes to the `out` directory. Preview locally with `npx serve@latest out`.
 
----
+## Related
 
-## 🗺 Roadmap
-- [x] Multilingual support (EN, NL, TH)
-- [x] SEO Optimization
-- [x] Responsive Hero Section
-- [ ] Update store links
+- [sanderdesnaijer.com](https://sanderdesnaijer.com) / portfolio and blog
+- [Building a Multilanguage Sudoku App with Flutter](https://sanderdesnaijer.com/blog/building-multilanguage-sudoku-app-flutter) / step-by-step guide
 
----
+## License
 
-## 📄 License
-This project is private and all rights are reserved.
+All rights reserved.
 
----
-Built with ❤️ by [Sander de Snaijer](https://metsander.com)
+Built by [Sander de Snaijer](https://sanderdesnaijer.com)

@@ -720,6 +720,22 @@ export default function HomePage({ lang }: { lang: Lang }) {
           >
             {t.footer.contact}
           </a>
+          <a
+            href="https://sanderdesnaijer.com/projects/sudoku-ultimato"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-neutral-300 hover:text-white transition-colors text-sm uppercase tracking-widest"
+          >
+            Project
+          </a>
+          <a
+            href="https://sanderdesnaijer.com/blog/building-multilanguage-sudoku-app-flutter"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-neutral-300 hover:text-white transition-colors text-sm uppercase tracking-widest"
+          >
+            Blog
+          </a>
         </nav>
         <p className="text-neutral-300 text-xs">{t.footer.rights}</p>
         <a
